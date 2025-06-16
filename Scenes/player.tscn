@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://y7yahejeiy3j"]
+[gd_scene load_steps=10 format=3 uid="uid://y7yahejeiy3j"]
 
 [ext_resource type="Script" uid="uid://c64ppj3qwbgig" path="res://Scenes/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://bttpl6upflpq3" path="res://assets/Characters/MainCharacter/Animations/Spritesheetidle1.png" id="1_v0iea"]
+[ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://Scenes/PlayerCamControll.gd" id="2_6t5aa"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v0iea"]
 size = Vector3(1.19324, 9.18967, 0.962402)
@@ -46,10 +47,12 @@ animations = [{
 script = ExtResource("1_cvnsp")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 2, -16.201)
+transform = Transform3D(1, 0, -2.13163e-14, 0, 1, 0, 2.13163e-14, 0, 1, 0, 2, 32.4227)
 projection = 1
 current = true
 size = 25.0
+script = ExtResource("2_6t5aa")
+target_path = NodePath("..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(3.16714, 0, 0, 0, 1, 0, 0, 0, 1, 0.306005, 1.09315, 0.0187988)
