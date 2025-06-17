@@ -1,25 +1,24 @@
 extends Camera3D
 
 @export var target_path: NodePath
-@export var smooth_speed: float = 5.0
+@export var delay_time: float = 0.5
 
-var target: Node3D
+
+
+
 
 func _ready():
-	if target_path != null:
-		target = get_node(target_path) as Node3D
+	null
+#we probably want to get position of target, then move the camera to that position at a delay and only in x and y axis
 
-func _process(delta):
-	if target == null:
-		return
 
-	var desired_position = target.global_transform.origin
-	var current_position = global_transform.origin
+func _process(_delta):
+	#get current position of player
+	var target_node = get_node("/root/Node3D/Player/")
 	
-	desired_position.z = current_position.z
-
-	# Smooth
-	var new_position = current_position.lerp(desired_position, delta * smooth_speed)
-
-	# Set the new camera transform
-	global_transform.origin = new_position
+	var pos : Vector3 = target_node.position
+	
+	await get_tree().create_timer(delay_time).timeout
+	global_position = Vector3(pos.x,pos.y,32.423)
+	
+	

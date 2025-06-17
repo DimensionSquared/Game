@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://y7yahejeiy3j"]
+[gd_scene load_steps=11 format=3 uid="uid://y7yahejeiy3j"]
 
 [ext_resource type="Script" uid="uid://c64ppj3qwbgig" path="res://Scenes/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://bttpl6upflpq3" path="res://assets/Characters/MainCharacter/Animations/Spritesheetidle1.png" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://Scenes/PlayerCamControll.gd" id="2_6t5aa"]
+[ext_resource type="Script" uid="uid://dcdlvwrscb8vy" path="res://Scenes/CharacterSprite.gd" id="4_vgqql"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v0iea"]
 size = Vector3(1.19324, 9.18967, 0.962402)
@@ -63,3 +64,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 sprite_frames = SubResource("SpriteFrames_fkybt")
 autoplay = "default"
 frame_progress = 0.0519834
+script = ExtResource("4_vgqql")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
