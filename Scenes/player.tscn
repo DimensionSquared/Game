@@ -1,12 +1,52 @@
-[gd_scene load_steps=11 format=3 uid="uid://y7yahejeiy3j"]
+[gd_scene load_steps=21 format=3 uid="uid://y7yahejeiy3j"]
 
 [ext_resource type="Script" uid="uid://c64ppj3qwbgig" path="res://Scenes/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://bttpl6upflpq3" path="res://assets/Characters/MainCharacter/Animations/Spritesheetidle1.png" id="1_v0iea"]
-[ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://Scenes/PlayerCamControll.gd" id="2_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://1v4qrk0n2tbf" path="res://assets/Characters/MainCharacter/Animations/TestRunfinal.png" id="2_vgqql"]
 [ext_resource type="Script" uid="uid://dcdlvwrscb8vy" path="res://Scenes/CharacterSprite.gd" id="4_vgqql"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v0iea"]
 size = Vector3(1.19324, 9.18967, 0.962402)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
+atlas = ExtResource("2_vgqql")
+region = Rect2(0, 0, 2000, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3wgy"]
+atlas = ExtResource("2_vgqql")
+region = Rect2(2000, 0, 2000, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3smsa"]
+atlas = ExtResource("2_vgqql")
+region = Rect2(0, 2000, 2000, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8erm5"]
+atlas = ExtResource("2_vgqql")
+region = Rect2(2000, 2000, 2000, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1ek2"]
+atlas = ExtResource("2_vgqql")
+region = Rect2(0, 4000, 2000, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx1dd"]
+atlas = ExtResource("2_vgqql")
+region = Rect2(2000, 4000, 2000, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gymyn"]
+atlas = ExtResource("2_vgqql")
+region = Rect2(0, 6000, 2000, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu2lt"]
+atlas = ExtResource("2_vgqql")
+region = Rect2(2000, 6000, 2000, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukyrk"]
+atlas = ExtResource("2_vgqql")
+region = Rect2(0, 8000, 2000, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dp3o"]
+atlas = ExtResource("2_vgqql")
+region = Rect2(2000, 8000, 2000, 2000)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v0iea"]
 atlas = ExtResource("1_v0iea")
@@ -28,6 +68,41 @@ region = Rect2(2000, 2000, 2000, 2000)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_fkybt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3wgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3smsa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8erm5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ek2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx1dd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gymyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pu2lt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukyrk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dp3o")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_v0iea")
 }, {
 "duration": 1.0,
@@ -47,24 +122,14 @@ animations = [{
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_cvnsp")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, -2.13163e-14, 0, 1, 0, 2.13163e-14, 0, 1, 0, 2, 32.4227)
-projection = 1
-current = true
-size = 25.0
-script = ExtResource("2_6t5aa")
-target_path = NodePath("..")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(3.16714, 0, 0, 0, 1, 0, 0, 0, 1, 0.306005, 1.09315, 0.0187988)
 shape = SubResource("BoxShape3D_v0iea")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.17355, 0)
 sprite_frames = SubResource("SpriteFrames_fkybt")
+animation = &"Run"
 autoplay = "default"
-frame_progress = 0.0519834
+frame_progress = 0.546868
 script = ExtResource("4_vgqql")
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
