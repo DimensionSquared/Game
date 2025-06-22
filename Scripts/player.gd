@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 
 
-const SPEED = 25
+const SPEED = 30
 const JUMP_VELOCITY = 80
 var GRAVITY = ProjectSettings.get_setting("physics/3d/default_gravity") as float
 

@@ -7,7 +7,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta):
 	if Input.is_action_just_pressed("Move_left"):
 		flip_h = true
 	if Input.is_action_just_pressed("Move_right"):

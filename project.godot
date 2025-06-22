@@ -46,7 +46,7 @@ sensors/enable_gravity=true
 
 [physics]
 
-3d/default_gravity=200.0
+3d/default_gravity=275.0
 
 [rendering]
 
