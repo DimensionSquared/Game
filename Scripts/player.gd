@@ -23,15 +23,19 @@ func _physics_process(delta: float) -> void:
 	velocity.x = direction * SPEED
 	
 	if is_on_floor() and Input.is_action_pressed("Move_left") or Input.is_action_pressed("Move_right"):
-		$AnimatedSprite3D.play("Run")
-		
-		
+		$AnimatedSprite3D.play("Run-Start")
+
 	else:
 		$AnimatedSprite3D.play("default")
-		
-	
-	
-	#making sure z dosent change to lock into 2d
+			#making sure z dosent change to lock into 2d
 	velocity.z = 0
 
 	move_and_slide()
+		
+
+func _on_animated_sprite_3d_animation_finished():
+	$AnimatedSprite3D.play("Run")
+	print("Run")
+	
+	
+	
