@@ -2,26 +2,27 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1v4qrk0n2tbf"
-path="res://.godot/imported/TestRunfinal.png-68fe4892988204c30d0ac0ea82dae004.ctex"
+uid="uid://cycxhvnr1qsmb"
+path.s3tc="res://.godot/imported/House2.png-b92c3d942e82d2e8c1036c681e8983e9.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://assets/Characters/MainCharacter/Animations/RunVer/TestRunfinal.png"
-dest_files=["res://.godot/imported/TestRunfinal.png-68fe4892988204c30d0ac0ea82dae004.ctex"]
+source_file="res://assets/Scene Assets/Tilesets/Test tilesets/House2.png"
+dest_files=["res://.godot/imported/House2.png-b92c3d942e82d2e8c1036c681e8983e9.s3tc.ctex"]
 
 [params]
 
-compress/mode=3
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yhs5kw18ss5h"
-path="res://.godot/imported/FixedBlink.png-fed9fcdf164ad09132909d5a6d230f6a.ctex"
+uid="uid://b6wuflacwn52b"
+path="res://.godot/imported/FinalRun.png-3fe741aa5b3cf55ddc358eb800706801.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/MainCharacter/Animations/Eye-BlinkVer/FixedBlink.png"
-dest_files=["res://.godot/imported/FixedBlink.png-fed9fcdf164ad09132909d5a6d230f6a.ctex"]
+source_file="res://assets/Characters/MainCharacter/Animations/RunVer/FinalRun.png"
+dest_files=["res://.godot/imported/FinalRun.png-3fe741aa5b3cf55ddc358eb800706801.ctex"]
 
 [params]
 

@@ -1,40 +1,83 @@
-[gd_scene load_steps=6 format=3 uid="uid://rwrgrgogyffm"]
+[gd_scene load_steps=7 format=3 uid="uid://rwrgrgogyffm"]
 
 [ext_resource type="PackedScene" uid="uid://y7yahejeiy3j" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://bb5eudmnig2uu" path="res://assets/Scene Assets/Tilesets/Test tilesets/Brick1.png" id="2_3dryh"]
 [ext_resource type="Texture2D" uid="uid://b38g1ot7e55qs" path="res://assets/Scene Assets/Tilesets/Test tilesets/BasicBrickroadtiles.png" id="2_qxrlw"]
 [ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://scripts/PlayerCamControll.gd" id="3_wrm1d"]
+[ext_resource type="Texture2D" uid="uid://cycxhvnr1qsmb" path="res://assets/Scene Assets/Tilesets/Test tilesets/House2.png" id="5_wowpa"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wrm1d"]
-size = Vector3(59.5449, 12.3462, 44.1948)
+size = Vector3(160.147, 12.3462, 44.1948)
 
 [node name="Node3D" type="Node3D"]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-visible = false
+transform = Transform3D(4.30561, 0, 0, 0, 2.90521, 0, 0, 0, 1, -0.0328445, 3.91388, -14.2741)
+shaded = true
 texture = ExtResource("2_qxrlw")
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.31477, -20.405, 0.105831)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.31477, -20.5348, 0.105831)
+shaded = true
+render_priority = 1
 texture = ExtResource("2_3dryh")
 
 [node name="Sprite3D3" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6329, -20.405, 0.105831)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6329, -20.5348, 0.105831)
+shaded = true
+render_priority = 1
+texture = ExtResource("2_3dryh")
+
+[node name="Sprite3D7" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5448, -20.5348, 0.105831)
+shaded = true
+render_priority = 1
+texture = ExtResource("2_3dryh")
+
+[node name="Sprite3D9" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.9648, -20.5348, 0.105831)
+shaded = true
+render_priority = 1
+texture = ExtResource("2_3dryh")
+
+[node name="Sprite3D10" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.3347, -20.5348, 0.105831)
+shaded = true
+render_priority = 1
 texture = ExtResource("2_3dryh")
 
 [node name="Sprite3D4" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.1987, -20.405, 0.105831)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.1987, -20.5348, 0.105831)
+shaded = true
+render_priority = 1
+texture = ExtResource("2_3dryh")
+
+[node name="Sprite3D6" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.0575, -20.5348, 0.105831)
+shaded = true
+render_priority = 1
+texture = ExtResource("2_3dryh")
+
+[node name="Sprite3D8" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.8429, -20.5348, 0.105831)
+shaded = true
+render_priority = 1
+texture = ExtResource("2_3dryh")
+
+[node name="Sprite3D11" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.0406, -20.5348, 0.105831)
+shaded = true
+render_priority = 1
 texture = ExtResource("2_3dryh")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.54796, -16.5164, 2.71011)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3084, -16.5164, 2.71011)
 shape = SubResource("BoxShape3D_wrm1d")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, -2.13163e-14, 0, 1, 0, 2.13163e-14, 0, 1, 0, 2, 51.1048)
-projection = 1
 current = true
 size = 50.714
 script = ExtResource("3_wrm1d")
@@ -42,3 +85,19 @@ target_path = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("1_ebmjs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.982916)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(0.908575, -0.241005, 0.341187, -0.157652, 0.558537, 0.81436, -0.38683, -0.793696, 0.469478, 12.1707, 27.6073, 22.0282)
+light_color = Color(1, 0.996078, 0.823529, 1)
+light_energy = 28.345
+light_indirect_energy = 1.285
+shadow_enabled = true
+distance_fade_enabled = true
+spot_range = 54.6971
+spot_angle = 23.8108
+
+[node name="Sprite3D5" type="Sprite3D" parent="."]
+transform = Transform3D(2.105, 0, 0, 0, 2.105, 0, 0, 0, 2.105, -13.6163, 3.63977, -1.85616)
+shaded = true
+render_priority = 1
+texture = ExtResource("5_wowpa")
