@@ -11,10 +11,13 @@ func _process(_delta):
 	#flips eyes if char flips left
 	if Input.is_action_just_pressed("Move_left"):
 		flip_h = true
+		$OmniLight3D.position.y = 0.05
+		$OmniLight3D2.position.y = 0.1
 	#flips eyes back if char flips right
 	if Input.is_action_just_pressed("Move_right"):
 		flip_h = false
-	
+		$OmniLight3D.position.y = 0.1
+		$OmniLight3D2.position.y = 0.05
 	#checks if flip_h has changed from the value of prevflip
 	#if it has changed then checks what it changed to then moves eyes to correct
 	#-position
@@ -39,8 +42,9 @@ func _on_animation_looped() -> void:
 	var rand = randi_range(0, 5)
 	if rand == 3:
 		self.play("Blink")
-
+		
 
 #when blink plays, plays idle eyes anim
 func _on_animation_finished():
 	self.play("NoBlink")
+	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://rwrgrgogyffm"]
+[gd_scene load_steps=15 format=3 uid="uid://rwrgrgogyffm"]
 
 [ext_resource type="PackedScene" uid="uid://y7yahejeiy3j" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://bb5eudmnig2uu" path="res://assets/Scene Assets/Tilesets/Test tilesets/Brick1.png" id="2_3dryh"]
@@ -8,6 +8,63 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wrm1d"]
 size = Vector3(160.147, 12.3462, 44.1948)
+
+[sub_resource type="Curve" id="Curve_wowpa"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_wowpa"]
+width = 2059
+curve = SubResource("Curve_wowpa")
+
+[sub_resource type="Gradient" id="Gradient_wowpa"]
+offsets = PackedFloat32Array(0.590909, 0.745455, 0.936364)
+colors = PackedColorArray(0.254545, 0.254545, 0.254545, 1, 0, 0, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_i6g32"]
+gradient = SubResource("Gradient_wowpa")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wowpa"]
+particle_flag_rotate_y = true
+emission_shape_scale = Vector3(40, 10, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+angle_min = 1.07288e-05
+angle_max = 1.07288e-05
+angle_curve = SubResource("CurveTexture_wowpa")
+inherit_velocity_ratio = 1.0
+direction = Vector3(0, -1, 0)
+spread = 5.0
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = -1.60933e-05
+linear_accel_min = -2.23517e-06
+linear_accel_max = -2.23517e-06
+tangential_accel_min = -2.23517e-06
+tangential_accel_max = -2.23517e-06
+color = Color(0.737255, 0.780392, 0.8, 1)
+color_ramp = SubResource("GradientTexture1D_i6g32")
+collision_mode = 2
+
+[sub_resource type="Curve" id="Curve_i6g32"]
+_limits = [0.0, 0.1, 0.0, 1.0]
+_data = [Vector2(0, 0.00112358), 0.0, 0.0, 0, 0, Vector2(0.214286, 0.0685393), 0.0, 0.0, 0, 0, Vector2(0.416667, 0.0966292), 0.0, 0.0, 0, 0, Vector2(1, 0.00224718), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1l0tm"]
+render_priority = 2
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+use_particle_trails = true
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_v158k"]
+material = SubResource("StandardMaterial3D_1l0tm")
+section_length = 0.1
+curve = SubResource("Curve_i6g32")
 
 [node name="Node3D" type="Node3D"]
 
@@ -19,55 +76,55 @@ texture = ExtResource("2_qxrlw")
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.31477, -20.5348, 0.105831)
 shaded = true
-render_priority = 1
+render_priority = 2
 texture = ExtResource("2_3dryh")
 
 [node name="Sprite3D3" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6329, -20.5348, 0.105831)
 shaded = true
-render_priority = 1
+render_priority = 2
 texture = ExtResource("2_3dryh")
 
 [node name="Sprite3D7" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5448, -20.5348, 0.105831)
 shaded = true
-render_priority = 1
+render_priority = 2
 texture = ExtResource("2_3dryh")
 
 [node name="Sprite3D9" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.9648, -20.5348, 0.105831)
 shaded = true
-render_priority = 1
+render_priority = 2
 texture = ExtResource("2_3dryh")
 
 [node name="Sprite3D10" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.3347, -20.5348, 0.105831)
 shaded = true
-render_priority = 1
+render_priority = 2
 texture = ExtResource("2_3dryh")
 
 [node name="Sprite3D4" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.1987, -20.5348, 0.105831)
 shaded = true
-render_priority = 1
+render_priority = 2
 texture = ExtResource("2_3dryh")
 
 [node name="Sprite3D6" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.0575, -20.5348, 0.105831)
 shaded = true
-render_priority = 1
+render_priority = 2
 texture = ExtResource("2_3dryh")
 
 [node name="Sprite3D8" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.8429, -20.5348, 0.105831)
 shaded = true
-render_priority = 1
+render_priority = 2
 texture = ExtResource("2_3dryh")
 
 [node name="Sprite3D11" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.0406, -20.5348, 0.105831)
 shaded = true
-render_priority = 1
+render_priority = 2
 texture = ExtResource("2_3dryh")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
@@ -86,6 +143,24 @@ target_path = NodePath("../Player")
 [node name="Player" parent="." instance=ExtResource("1_ebmjs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.982916)
 
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Player"]
+transform = Transform3D(1.00091, -0.00616668, 0, 0.00616668, 1.00091, 0, 0, 0, 3.07133, -1.84359, 24.5456, -1.25201)
+visible = false
+amount = 50
+lifetime = 2.0
+speed_scale = 6.0
+randomness = 0.84
+collision_base_size = 91.49
+visibility_aabb = AABB(-4, 2.275, -4, 40, -41.125, 8)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_wowpa")
+draw_pass_1 = SubResource("RibbonTrailMesh_v158k")
+
+[node name="GPUParticlesCollisionSDF3D" type="GPUParticlesCollisionSDF3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.84126, -11.325, -1.14172)
+visible = false
+size = Vector3(108.057, 2, 21.5057)
+
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(0.908575, -0.241005, 0.341187, -0.157652, 0.558537, 0.81436, -0.38683, -0.793696, 0.469478, 12.1707, 27.6073, 22.0282)
 light_color = Color(1, 0.996078, 0.823529, 1)
@@ -101,3 +176,13 @@ transform = Transform3D(2.105, 0, 0, 0, 2.105, 0, 0, 0, 2.105, -13.6163, 3.63977
 shaded = true
 render_priority = 1
 texture = ExtResource("5_wowpa")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.999981, -0.00616097, 0, 0.00616097, 0.999981, 0, 0, 0, 1, -1.84359, 53.9208, 51.4686)
+visible = false
+light_energy = 0.1
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8627, 6.10347, 0)
+visible = false
+light_energy = 16.0

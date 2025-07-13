@@ -8,7 +8,7 @@ var GRAVITY = ProjectSettings.get_setting("physics/3d/default_gravity") as float
 
 
 
-func _process(delta):
+func _process(_delta):
 	null
 	
 func _physics_process(delta: float) -> void:
@@ -50,5 +50,5 @@ func _physics_process(delta: float) -> void:
 func _on_animated_sprite_3d_animation_finished():
 	$AnimatedSprite3D.play("Run")
 	
-	
+
 	

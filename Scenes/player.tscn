@@ -461,9 +461,22 @@ render_priority = 2
 sprite_frames = SubResource("SpriteFrames_nv4vc")
 animation = &"Blink"
 autoplay = "NoBlink"
-frame = 15
 script = ExtResource("6_3smsa")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Eyeanim"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.349962, 0.160465, 0.036617)
+light_energy = 0.05
+omni_range = 1.0
+omni_attenuation = 1.39
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Eyeanim"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.357948, 0.0920186, 0.036617)
+light_energy = 0.05
+omni_range = 1.0
+omni_attenuation = 1.39
+
 [connection signal="animation_finished" from="AnimatedSprite3D" to="." method="_on_animated_sprite_3d_animation_finished"]
+[connection signal="animation_changed" from="Eyeanim" to="." method="_on_eyeanim_animation_changed"]
 [connection signal="animation_finished" from="Eyeanim" to="Eyeanim" method="_on_animation_finished"]
+[connection signal="animation_looped" from="Eyeanim" to="." method="_on_eyeanim_animation_looped"]
 [connection signal="animation_looped" from="Eyeanim" to="Eyeanim" method="_on_animation_looped"]

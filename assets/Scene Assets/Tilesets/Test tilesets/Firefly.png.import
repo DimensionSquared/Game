@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6wuflacwn52b"
-path="res://.godot/imported/FinalRun.png-3fe741aa5b3cf55ddc358eb800706801.ctex"
+uid="uid://myhor61wjnjf"
+path="res://.godot/imported/Firefly.png-61ffa269e32d4248bc46fceead59068d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/MainCharacter/Animations/RunVer/FinalRun.png"
-dest_files=["res://.godot/imported/FinalRun.png-3fe741aa5b3cf55ddc358eb800706801.ctex"]
+source_file="res://assets/Scene Assets/Tilesets/Test tilesets/Firefly.png"
+dest_files=["res://.godot/imported/Firefly.png-61ffa269e32d4248bc46fceead59068d.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
