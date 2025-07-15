@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://y7yahejeiy3j" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://bb5eudmnig2uu" path="res://assets/Scene Assets/Tilesets/Test tilesets/Brick1.png" id="2_3dryh"]
 [ext_resource type="Texture2D" uid="uid://b38g1ot7e55qs" path="res://assets/Scene Assets/Tilesets/Test tilesets/BasicBrickroadtiles.png" id="2_qxrlw"]
-[ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://scripts/PlayerCamControll.gd" id="3_wrm1d"]
+[ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://Scripts/PlayerCamControll.gd" id="3_wrm1d"]
 [ext_resource type="Texture2D" uid="uid://cycxhvnr1qsmb" path="res://assets/Scene Assets/Tilesets/Test tilesets/House2.png" id="5_wowpa"]
 [ext_resource type="PackedScene" uid="uid://byc3xg7s28iup" path="res://firefly.tscn" id="6_i6g32"]
 
