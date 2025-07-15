@@ -2,8 +2,7 @@ extends AnimatedSprite3D
 
 var initposition = position
 
-func _ready():
-	null
+
 
 func _process(_delta):
 	#gets flip before running any flip comands

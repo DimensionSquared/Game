@@ -8,8 +8,7 @@ var GRAVITY = ProjectSettings.get_setting("physics/3d/default_gravity") as float
 
 
 
-func _process(_delta):
-	null
+
 	
 func _physics_process(delta: float) -> void:
 	var rightmarker = $AnimatedSprite3D/RunningR.global_position

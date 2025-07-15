@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://byc3xg7s28iup"]
 
-[ext_resource type="Script" uid="uid://d0l83ou8w7bcj" path="res://Scripts/fireflyControll.gd" id="1_fc1d2"]
+[ext_resource type="Script" uid="uid://d0l83ou8w7bcj" path="res://scripts/fireflyControll.gd" id="1_fc1d2"]
 [ext_resource type="Texture2D" uid="uid://myhor61wjnjf" path="res://assets/Scene Assets/Firefly/Firefly.png" id="1_ryrtv"]
 
 [node name="Firefly" type="CharacterBody3D"]
