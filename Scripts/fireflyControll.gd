@@ -16,6 +16,8 @@ func _ready():
 #velocity.x = SPEEDx
 #calculates rand ratio that x and y are at, then based on that ratio changes x and y by a certain number
 #while keeping same velocity
+
+#Note: refer to notes on laptop, not sure if using these comments anymore
 func _process(delta):
 	FireflyDistance = (FireflySpeed * delta)
 	#we only have c (phythagoris) so we need to calc a rand number inbewteen the correct range
