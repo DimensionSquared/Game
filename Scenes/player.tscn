@@ -1,11 +1,11 @@
 [gd_scene load_steps=67 format=3 uid="uid://y7yahejeiy3j"]
 
-[ext_resource type="Script" uid="uid://c64ppj3qwbgig" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Script" uid="uid://c64ppj3qwbgig" path="res://scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://b6wuflacwn52b" path="res://assets/Characters/MainCharacter/Animations/RunVer/FinalRun.png" id="2_8erm5"]
 [ext_resource type="Texture2D" uid="uid://dewymgxh0dgqh" path="res://assets/Characters/MainCharacter/Animations/Idle ver/CharidleFinal.png" id="3_f1ek2"]
-[ext_resource type="Script" uid="uid://dcdlvwrscb8vy" path="res://Scripts/CharacterSprite.gd" id="4_vgqql"]
-[ext_resource type="Script" uid="uid://bok5hq3o48gn0" path="res://Scripts/Eye_Marker.gd" id="5_f1ek2"]
-[ext_resource type="Script" uid="uid://bg8aacj1ekxq4" path="res://Scripts/EyeBlink.gd" id="6_3smsa"]
+[ext_resource type="Script" uid="uid://dcdlvwrscb8vy" path="res://scripts/CharacterSprite.gd" id="4_vgqql"]
+[ext_resource type="Script" uid="uid://bok5hq3o48gn0" path="res://scripts/Eye_Marker.gd" id="5_f1ek2"]
+[ext_resource type="Script" uid="uid://bg8aacj1ekxq4" path="res://scripts/EyeBlink.gd" id="6_3smsa"]
 [ext_resource type="Texture2D" uid="uid://dtkplqtlf4inx" path="res://assets/Characters/MainCharacter/Animations/Eye-BlinkVer/Eye-blinkFinished.png" id="6_f1ek2"]
 [ext_resource type="Texture2D" uid="uid://d3ljyh7aon3aa" path="res://assets/Characters/MainCharacter/Animations/Eye-BlinkVer/Eye-IdleFinal.png" id="8_tx1dd"]
 

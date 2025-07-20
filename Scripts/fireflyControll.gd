@@ -1,37 +1,49 @@
 extends CharacterBody3D
 
 
-var FireflySpeed = 0
 var FireflyX = 0
 var FireflyY = 0
-const startdirectionsx = [(1), (0), (-1), (0)]
-const startdirectionsy = [(0), (-1), (0), (1)]
+var directionsx = [(0.1), (0), (-0.1), (0)]
+var directionsy = [(0), (-0.1), (0), (0.1)]
 var Fireflyvelocity = randf_range(10,40)
-#we have them going at a random direction at constant speed
-#set random speed between 10 and 40 (will be constant right now)
 func _ready():
-	
-	#Picks random x and y direction to start moving in 
-	FireflyX = startdirectionsx.pick_random()
-	FireflyY = startdirectionsy.pick_random()
-	print(FireflyX)
-	print(FireflyY)
-	
-	
-#to calculate distance (x,y) we need to take the hypotenuse (displacment / distance) and use pythagorus
-#to figure out the adjacent and the opposite sides (x, y)
-#velocity.x = SPEEDx
-#calculates rand ratio that x and y are at, then based on that ratio changes x and y by a certain number
-#while keeping same velocity
+	pass
 
-#Note: refer to notes on laptop, not sure if using these comments anymore
-func _process(delta):
-	var FireflyDistance = (Fireflyvelocity * delta)
-	velocity.x = FireflyX * FireflySpeed
-	velocity.y = FireflyY * FireflySpeed
 	
-	print(velocity)
-	#we only have c (phythagoris) so we need to calc a rand number inbewteen the correct range
-	#for a or b so we can figure out b
 	
-#calculation for distance
+
+
+	
+
+
+
+func _process(_delta):
+	#gen number 1 - 10
+	
+	
+	var rangeX = randi_range(1, 10)
+	var rangeY = randi_range(1, 10)
+	var rangeX2 = randi_range(1, 100)
+	var rangeY2 = randi_range(1, 100)
+	#if the rand range is == to 8, and the 2nd one is equal to 34, stay same dir, else plar rand dir
+	if rangeX == 8:
+		if rangeX2 == 34:
+			directionsx = [(FireflyX)]
+		else:
+			directionsx = [(0.01), (0), (-0.01)]
+			FireflyX = directionsx.pick_random()
+	if rangeY == 8:
+		if rangeY2 == 34:
+			directionsy = [(FireflyY)]
+		else:
+			directionsy = [(0.01), (0), (-0.01)]
+			FireflyY = directionsy.pick_random()
+	
+	velocity.x += FireflyX
+	velocity.y += FireflyY
+
+	move_and_slide()
+
+
+func _on_visible_on_screen_notifier_3d_screen_exited() -> void:
+	velocity.x = FireflyX*-1

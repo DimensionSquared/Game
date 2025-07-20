@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 	var direction = Input.get_axis("Move_left","Move_right")
 	velocity.x = direction * SPEED
 	
-	
+
 	
 	if is_on_floor() and Input.is_action_pressed("Move_left") or Input.is_action_pressed("Move_right"):
 		$AnimatedSprite3D.play("Run-Start")
@@ -44,6 +44,7 @@ func _physics_process(delta: float) -> void:
 	velocity.z = 0
 
 	move_and_slide()
+	#var playerlocation = self.Vector3
 		
 
 func _on_animated_sprite_3d_animation_finished():

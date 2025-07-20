@@ -2,27 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dby1da1kiw6m"
-path.s3tc="res://.godot/imported/Layer 7.png-92d3b6e6a9bc76a6c34a31c9dab831b2.s3tc.ctex"
+uid="uid://28douf6ksnbd"
+path="res://.godot/imported/Bigger tree.png-f2732ed22350be1c4dde0af8a516d7b2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Scene Assets/Tilesets/Test tilesets/Layer 7.png"
-dest_files=["res://.godot/imported/Layer 7.png-92d3b6e6a9bc76a6c34a31c9dab831b2.s3tc.ctex"]
+source_file="res://assets/Scene Assets/Tilesets/Test tilesets/Tree2/Bigger tree.png"
+dest_files=["res://.godot/imported/Bigger tree.png-f2732ed22350be1c4dde0af8a516d7b2.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

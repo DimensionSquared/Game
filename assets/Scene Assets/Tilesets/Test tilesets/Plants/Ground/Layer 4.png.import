@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dby1da1kiw6m"
-path.s3tc="res://.godot/imported/Layer 7.png-92d3b6e6a9bc76a6c34a31c9dab831b2.s3tc.ctex"
+uid="uid://bcixdr7ueb5ha"
+path.s3tc="res://.godot/imported/Layer 4.png-e0c6cd4f22f8d185754d637c1c179b14.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Scene Assets/Tilesets/Test tilesets/Layer 7.png"
-dest_files=["res://.godot/imported/Layer 7.png-92d3b6e6a9bc76a6c34a31c9dab831b2.s3tc.ctex"]
+source_file="res://assets/Scene Assets/Tilesets/Test tilesets/Plants/Ground/Layer 4.png"
+dest_files=["res://.godot/imported/Layer 4.png-e0c6cd4f22f8d185754d637c1c179b14.s3tc.ctex"]
 
 [params]
 
