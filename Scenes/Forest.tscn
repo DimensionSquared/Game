@@ -81,6 +81,41 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864
 shaded = true
 texture = ExtResource("14_vr0cu")
 
+[node name="Bigtree2" type="Sprite3D" parent="."]
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 2.99456, 11.4691, -19.0354)
+shaded = true
+render_priority = 1
+texture = ExtResource("9_2ifor")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Bigtree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
+shaded = true
+render_priority = 1
+texture = ExtResource("10_6m4iw")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Bigtree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
+shaded = true
+render_priority = 1
+texture = ExtResource("11_gidt0")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Bigtree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
+shaded = true
+render_priority = 1
+texture = ExtResource("12_hsl1u")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Bigtree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
+shaded = true
+render_priority = 1
+texture = ExtResource("13_18ofl")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Bigtree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864)
+shaded = true
+texture = ExtResource("14_vr0cu")
+
 [node name="SmallTree2" type="Sprite3D" parent="."]
 transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 21.2095, 8.46542, -3.39359)
 shaded = true
@@ -196,7 +231,7 @@ shape = SubResource("BoxShape3D_6m4iw")
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(0.908575, -0.241005, 0.341187, -0.245762, 0.35205, 0.90314, -0.337776, -0.904421, 0.260634, 36.547, 65.0926, 24.807)
 light_color = Color(0.835294, 0.996078, 1, 1)
-light_energy = 25.95
+light_energy = 20.0
 light_indirect_energy = 1.285
 light_volumetric_fog_energy = 0.0
 light_size = 1.0
@@ -206,7 +241,7 @@ distance_fade_begin = 120.0
 distance_fade_shadow = 120.0
 spot_range = 4096.0
 spot_attenuation = 0.8
-spot_angle = 10.99
+spot_angle = 8.22835
 spot_angle_attenuation = 0.108818
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -238,3 +273,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8548, -16.9179, -7.62612)
 
 [node name="Firefly8" parent="." instance=ExtResource("22_2ifor")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4747, -21.9268, -7.62612)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -107.237, 54.4983, 0)
+light_energy = 0.1

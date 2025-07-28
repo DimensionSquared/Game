@@ -244,7 +244,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 7.0
+"speed": 8.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y6uwr"]
@@ -396,7 +396,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Blink",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -425,7 +425,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"NoBlink",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [node name="Player" type="CharacterBody3D"]
@@ -437,11 +437,10 @@ shape = SubResource("BoxShape3D_v0iea")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.50622, 0.459063, 0.113683)
-shaded = true
 texture_filter = 0
 render_priority = 1
 sprite_frames = SubResource("SpriteFrames_fkybt")
-animation = &"Run"
+animation = &"Run-Start"
 autoplay = "default"
 script = ExtResource("4_vgqql")
 

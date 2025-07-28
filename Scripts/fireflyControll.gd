@@ -9,14 +9,6 @@ var Fireflyvelocity = randf_range(10,40)
 func _ready():
 	pass
 
-	
-	
-
-
-	
-
-
-
 func _process(_delta):
 	#gen number 1 - 10
 	
@@ -43,7 +35,3 @@ func _process(_delta):
 	velocity.y += FireflyY
 
 	move_and_slide()
-
-
-func _on_visible_on_screen_notifier_3d_screen_exited() -> void:
-	velocity.x = FireflyX*-1

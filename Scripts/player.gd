@@ -25,21 +25,24 @@ func _physics_process(delta: float) -> void:
 	#collecting input dir
 	var direction = Input.get_axis("Move_left","Move_right")
 	velocity.x = direction * SPEED
-	
+	print(direction)
 
 	
-	if is_on_floor() and Input.is_action_pressed("Move_left") or Input.is_action_pressed("Move_right"):
-		$AnimatedSprite3D.play("Run-Start")
+	if is_on_floor() and Input.is_action_just_pressed("Move_left") or Input.is_action_just_pressed("Move_right"):
+		if direction == 1 or -1:
+			$AnimatedSprite3D.play("Run-Start")
+		
+			
 		if Input.is_action_pressed("Move_left"):
 			$Eyeanim.global_position = leftmarker
 		else:
 			$Eyeanim.global_position = rightmarker
 			
-	else:
+	
+		
+	if is_on_floor() and direction == 0:
 		$AnimatedSprite3D.play("default")
 		
-	if is_on_floor() and Input.is_action_pressed("Move_left") and Input.is_action_pressed("Move_right"):
-		$AnimatedSprite3D.play("default")
 	#making sure z dosent change to lock into 2d
 	velocity.z = 0
 
@@ -47,8 +50,10 @@ func _physics_process(delta: float) -> void:
 	#var playerlocation = self.Vector3
 		
 
-func _on_animated_sprite_3d_animation_finished():
-	$AnimatedSprite3D.play("Run")
-	
 
 	
+
+
+func _on_animated_sprite_3d_animation_finished() -> void:
+	$AnimatedSprite3D.play("Run")
+	print("ok")
