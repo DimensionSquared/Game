@@ -3,7 +3,14 @@ extends AnimatedSprite3D
 
 
 func _process(_delta):
-	if Input.is_action_just_pressed("Move_left"):
+	var direction = Input.get_axis("Move_left","Move_right")
+	
+	
+	if direction == -1:
 		flip_h = true
-	if Input.is_action_just_pressed("Move_right"):
+	if direction == 1:
 		flip_h = false
+	
+	if Input.is_action_pressed("Move_left") and Input.is_action_pressed("Move_right"):
+		print(direction)
+	

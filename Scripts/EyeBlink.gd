@@ -6,32 +6,37 @@ var initposition = position
 
 func _process(_delta):
 	#gets flip before running any flip comands
-	var prevflip = flip_h
+	var direction = Input.get_axis("Move_left","Move_right")
+	var prevdirection = direction
 	#flips eyes if char flips left
-	if Input.is_action_just_pressed("Move_left"):
+	if direction == -1:
 		flip_h = true
 		$OmniLight3D.position.y = 0.05
 		$OmniLight3D2.position.y = 0.1
+		
+		
 	#flips eyes back if char flips right
-	if Input.is_action_just_pressed("Move_right"):
+	if direction == 1:
 		flip_h = false
 		$OmniLight3D.position.y = 0.1
 		$OmniLight3D2.position.y = 0.05
-	#checks if flip_h has changed from the value of prevflip
-	#if it has changed then checks what it changed to then moves eyes to correct
-	#-position
-	if flip_h == prevflip:
-		null
-	elif flip_h == true:
-		position.x = -4
-	elif flip_h == false:
-		position.x = -3
+		
+		
+	#checking if direction has changed
+	if direction == prevdirection:
+		position.x += 0
+	while direction == 0:
+		if flip_h == false:
+			position.x = -2.5
+		if flip_h == true:
+			position.x = -4.5
+		break
 
 #moves eyes back to idle position
-	if Input.is_action_just_released("Move_left") and flip_h == true:
+	if direction == 0 and flip_h == true:
 		position = initposition
 		position.x = -4.1
-	if Input.is_action_just_released("Move_right") and flip_h == false:
+	if direction == 0 and flip_h == false:
 		position = initposition
 		
 
