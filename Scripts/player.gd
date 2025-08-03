@@ -29,28 +29,33 @@ func _physics_process(delta: float) -> void:
 	while direction == 1 or -1:
 		if SPEED >= 25:
 			break
-		else:
-			SPEED += 1
+		if direction == 0:
 			break
+		else:
+			SPEED += 2
+			break
+			
 	
 	
 	#slowing down character gradually after stopping
 	while direction == 0:
 		if SPEED == 0:
 			break
+		if SPEED < 0:
+			break
 		else:
-			SPEED -= 1
+			SPEED -= 4
 			break
 			
 	if SPEED >1:
-		print(SPEED)
+		pass
 		
 	velocity.x = direction * SPEED
 	
 	
 	if direction == 1 or -1:
 		$AnimatedSprite3D.play("Run-Start")
-	
+		print("Run-start")
 	
 	if is_on_floor():
 		
@@ -63,7 +68,8 @@ func _physics_process(delta: float) -> void:
 		
 	if is_on_floor() and direction == 0:
 		$AnimatedSprite3D.play("default")
-		
+		print("Default")
+		#not working
 	#making sure z dosent change to lock into 2d
 	velocity.z = 0
 
@@ -77,4 +83,5 @@ func _physics_process(delta: float) -> void:
 
 func _on_animated_sprite_3d_animation_finished() -> void:
 	$AnimatedSprite3D.play("Run")
-	
+	print("Run")
+	#not working
