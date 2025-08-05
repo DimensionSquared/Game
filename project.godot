@@ -61,7 +61,6 @@ viewport/hdr_2d=true
 anti_aliasing/quality/msaa_3d=1
 anti_aliasing/screen_space_roughness_limiter/amount=0.18
 anti_aliasing/screen_space_roughness_limiter/limit=0.15
-scaling_3d/mode=2
 scaling_3d/fsr_sharpness=0.0
 textures/decals/filter=0
 textures/light_projectors/filter=0

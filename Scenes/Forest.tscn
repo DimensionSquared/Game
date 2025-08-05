@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cth7fjpanfqgt" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree1/Layer 22.png" id="5_tnm7e"]
 [ext_resource type="Texture2D" uid="uid://08vqhxrynnx3" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree1/smaller tree.png" id="6_j8t0e"]
 [ext_resource type="PackedScene" uid="uid://y7yahejeiy3j" path="res://Scenes/player.tscn" id="7_08kc0"]
-[ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://scripts/PlayerCamControll.gd" id="8_qsy24"]
+[ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://Scripts/PlayerCamControll.gd" id="8_qsy24"]
 [ext_resource type="Texture2D" uid="uid://dvce6bic8g2el" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree2/Layer 29.png" id="9_2ifor"]
 [ext_resource type="Texture2D" uid="uid://ojefhq0jhb5r" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree2/Layer 28.png" id="10_6m4iw"]
 [ext_resource type="Texture2D" uid="uid://cslf0gap4ovfu" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree2/Layer 27.png" id="11_gidt0"]

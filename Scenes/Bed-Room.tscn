@@ -1,14 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://cps4axapjl33l"]
+[gd_scene load_steps=10 format=3 uid="uid://cps4axapjl33l"]
 
 [ext_resource type="Texture2D" uid="uid://bda06dl7oo26i" path="res://assets/HouseAssets/BedRoom/Bed.png" id="1_03x4i"]
 [ext_resource type="Texture2D" uid="uid://di52f0knrp65i" path="res://assets/HouseAssets/BedRoom/Book Case.png" id="2_q2ksr"]
 [ext_resource type="Texture2D" uid="uid://krss3tsrb4c6" path="res://assets/HouseAssets/BedRoom/Door.png" id="3_dbona"]
 [ext_resource type="Texture2D" uid="uid://4y6xje2wuqy3" path="res://assets/HouseAssets/BedRoom/Picture.png" id="4_f6h1l"]
-[ext_resource type="Texture2D" uid="uid://rauaeu6fwk8o" path="res://assets/HouseAssets/BedRoom/Wall.png" id="5_h04dw"]
 [ext_resource type="PackedScene" uid="uid://y7yahejeiy3j" path="res://Scenes/player.tscn" id="6_7x1xj"]
-[ext_resource type="Texture2D" uid="uid://b4cov5ykr7nnx" path="res://assets/HouseAssets/BedRoom/Wall2.png" id="6_q2ksr"]
 [ext_resource type="Texture2D" uid="uid://c0ur1qteabguq" path="res://assets/HouseAssets/BedRoom/Wall3.png" id="7_dbona"]
-[ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://scripts/PlayerCamControll.gd" id="7_m7w2y"]
+[ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://Scripts/PlayerCamControll.gd" id="7_m7w2y"]
 [ext_resource type="Texture2D" uid="uid://cn2b7kklwfwwg" path="res://assets/Interact.png" id="10_f6h1l"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wnxyt"]
@@ -39,18 +37,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.68157, 7.13358, 0.193339)
 shaded = true
 render_priority = 1
 texture = ExtResource("4_f6h1l")
-
-[node name="Wall" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.44889, 0)
-visible = false
-shaded = true
-texture = ExtResource("5_h04dw")
-
-[node name="Wall2" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17646, 14.6245, 0)
-visible = false
-shaded = true
-texture = ExtResource("6_q2ksr")
 
 [node name="Wall3" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17646, 6.59565, 0)

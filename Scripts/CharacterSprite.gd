@@ -12,5 +12,5 @@ func _process(_delta):
 		flip_h = false
 	
 	if Input.is_action_pressed("Move_left") and Input.is_action_pressed("Move_right"):
-		print(direction)
+		pass
 	
