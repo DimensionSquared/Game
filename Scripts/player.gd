@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 	
 	if direction * direction != direction2 * direction2:
 		direction_changed = true 
-		print("ok")
+		
 	else:
 		direction_changed = false
 		
@@ -53,7 +53,7 @@ func _physics_process(delta: float) -> void:
 	if direction_changed == true:
 		if direction == 1 or -1:
 			$AnimatedSprite3D.play("Run-Start")
-			print("Run-start")
+			
 		if direction == 0:
 			$AnimatedSprite3D.play("default")
 	
@@ -75,6 +75,6 @@ func _physics_process(delta: float) -> void:
 func _on_animated_sprite_3d_animation_finished():
 	if direction_changed == false:
 		$AnimatedSprite3D.play("Run")
-		print("Run")
+		
 	
 	
