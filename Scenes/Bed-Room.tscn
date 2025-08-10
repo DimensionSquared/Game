@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://krss3tsrb4c6" path="res://assets/HouseAssets/BedRoom/Door.png" id="3_dbona"]
 [ext_resource type="Script" uid="uid://0dybc2scmj3r" path="res://Scenes/door.gd" id="4_dbona"]
 [ext_resource type="PackedScene" uid="uid://y7yahejeiy3j" path="res://Scenes/player.tscn" id="6_7x1xj"]
-[ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://Scripts/PlayerCamControll.gd" id="7_m7w2y"]
+[ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://scripts/PlayerCamControll.gd" id="7_m7w2y"]
 [ext_resource type="Script" uid="uid://cl55qtflovfa5" path="res://Scenes/InteractButton.gd" id="8_q2ksr"]
 [ext_resource type="Texture2D" uid="uid://c0ur1qteabguq" path="res://assets/HouseAssets/BedRoom/Wall3.png" id="9_dbona"]
 [ext_resource type="Texture2D" uid="uid://cn2b7kklwfwwg" path="res://assets/Interact.png" id="10_f6h1l"]
