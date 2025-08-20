@@ -1,0 +1,107 @@
+[gd_scene load_steps=14 format=3 uid="uid://dsa0y2jhyktcq"]
+
+[ext_resource type="Texture2D" uid="uid://wrigsrvy7k6r" path="res://assets/HouseAssets/LivingRoom/Living room.png" id="1_3ysdx"]
+[ext_resource type="Texture2D" uid="uid://udgeyll6rhns" path="res://assets/HouseAssets/LivingRoom/Door-1.png" id="2_yosbh"]
+[ext_resource type="Texture2D" uid="uid://bluf8ybintjqt" path="res://assets/HouseAssets/LivingRoom/Door.png" id="3_41126"]
+[ext_resource type="Texture2D" uid="uid://d4diuwgu4anfs" path="res://assets/HouseAssets/LivingRoom/Picture.png" id="4_fqrew"]
+[ext_resource type="Texture2D" uid="uid://bcg70y0d81xm" path="res://assets/HouseAssets/LivingRoom/Layer 2.png" id="5_edsqu"]
+[ext_resource type="Texture2D" uid="uid://ck0ayclj8n4qk" path="res://assets/HouseAssets/LivingRoom/Son.png" id="6_jcixc"]
+[ext_resource type="Texture2D" uid="uid://e4uxtns6y2hp" path="res://assets/HouseAssets/LivingRoom/Father.png" id="7_lq3q6"]
+[ext_resource type="Texture2D" uid="uid://dy75yf2xho5hm" path="res://assets/HouseAssets/LivingRoom/Sideways door.png" id="8_r5w0m"]
+[ext_resource type="Texture2D" uid="uid://bo40m8nvfdvso" path="res://assets/HouseAssets/LivingRoom/Table.png" id="9_u764j"]
+[ext_resource type="Texture2D" uid="uid://cr7bp0pivnkdc" path="res://assets/HouseAssets/LivingRoom/Hinges.png" id="10_8oolt"]
+[ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://Scripts/PlayerCamControll.gd" id="11_41126"]
+[ext_resource type="PackedScene" uid="uid://y7yahejeiy3j" path="res://Scenes/player.tscn" id="12_fqrew"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_edsqu"]
+size = Vector3(160.147, 12.3462, 44.1948)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+shaded = true
+texture = ExtResource("1_3ysdx")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2701, -2.49643, 1.1814)
+shaded = true
+render_priority = 1
+texture = ExtResource("2_yosbh")
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.1329, -2.63067, 1.0123)
+shaded = true
+render_priority = 1
+texture = ExtResource("3_41126")
+
+[node name="Sprite3D4" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.241112, 6.51007, 0.49894)
+shaded = true
+render_priority = 1
+texture = ExtResource("4_fqrew")
+
+[node name="Sprite3D5" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.783623, 5.66617, 0.518231)
+shaded = true
+render_priority = 2
+texture = ExtResource("5_edsqu")
+
+[node name="Sprite3D7" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.38056, 5.21348, 0.811505)
+shaded = true
+render_priority = 2
+texture = ExtResource("6_jcixc")
+
+[node name="Sprite3D8" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.801117, 5.55887, 0.706342)
+shaded = true
+render_priority = 2
+texture = ExtResource("7_lq3q6")
+
+[node name="Sprite3D6" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5974, -2.06754, 0.40451)
+shaded = true
+render_priority = 1
+texture = ExtResource("8_r5w0m")
+
+[node name="Sprite3D9" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.66996, 2.20032)
+shaded = true
+render_priority = 1
+texture = ExtResource("9_u764j")
+
+[node name="Sprite3D10" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5184, -1.45836, 0.914398)
+shaded = true
+render_priority = 1
+texture = ExtResource("10_8oolt")
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(1, -1.20206e-08, 1.56157e-09, -1.68065e-09, -0.00991336, 0.999951, -1.20045e-08, -0.999951, -0.00991336, -0.270844, 12.6518, 1.61491)
+light_color = Color(1, 0.882353, 0.654902, 1)
+light_energy = 10.455
+light_size = 103.325
+spot_range = 51.9344
+spot_angle = 82.9688
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0818253, 0, 0)
+light_color = Color(1, 0.882353, 0.654902, 1)
+light_energy = 0.25
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35667, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3084, -16.5164, 2.71011)
+shape = SubResource("BoxShape3D_edsqu")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, -2.13163e-14, 0, 1, 0, 2.13163e-14, 0, 1, 20.0017, 2, 51.1048)
+current = true
+size = 50.714
+script = ExtResource("11_41126")
+target_path = NodePath("../Player")
+
+[node name="Player" parent="." instance=ExtResource("12_fqrew")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.6245, -0.307488, 3.74241)

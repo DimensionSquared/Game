@@ -8,7 +8,7 @@ var GRAVITY = ProjectSettings.get_setting("physics/3d/default_gravity") as float
 #ditects if started or stopped moving
 var direction_changed = false
 var direction = 0
-
+var is_full_running = false
 
 	
 func _physics_process(delta: float) -> void:
@@ -51,12 +51,17 @@ func _physics_process(delta: float) -> void:
 
 	#starts run or plays idle when stopped
 	if direction_changed == true:
-		if direction == 1 or -1:
+		if direction == 1 or -1 and is_full_running == false:
 			$AnimatedSprite3D.play("Run-Start")
+			
 			
 		if direction == 0:
 			$AnimatedSprite3D.play("default")
 	
+	if Input.is_action_just_released("Move_left"):
+		is_full_running = false
+	if Input.is_action_just_released("Move_right"):
+		is_full_running = false
 	
 	if is_on_floor():
 		
@@ -75,6 +80,7 @@ func _physics_process(delta: float) -> void:
 func _on_animated_sprite_3d_animation_finished():
 	if direction_changed == false:
 		$AnimatedSprite3D.play("Run")
-		
+		is_full_running = true
+	
 	
 	
