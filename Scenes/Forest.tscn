@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://chxe13pk070gw"]
+[gd_scene load_steps=57 format=3 uid="uid://chxe13pk070gw"]
 
 [ext_resource type="Texture2D" uid="uid://8ocxmljjeldb" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree1/Layer 18.png" id="1_gfl13"]
 [ext_resource type="Texture2D" uid="uid://bb1vnx5ncahiq" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree1/Layer 19.png" id="2_4xied"]
@@ -7,10 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://cth7fjpanfqgt" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree1/Layer 22.png" id="5_tnm7e"]
 [ext_resource type="Texture2D" uid="uid://08vqhxrynnx3" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree1/smaller tree.png" id="6_j8t0e"]
 [ext_resource type="PackedScene" uid="uid://y7yahejeiy3j" path="res://Scenes/player.tscn" id="7_08kc0"]
-[ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://Scripts/PlayerCamControll.gd" id="8_qsy24"]
+[ext_resource type="Texture2D" uid="uid://c1hfur8extu0l" path="res://assets/Scene Assets/Forest/Treefallanim12.png" id="8_18ofl"]
+[ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://scripts/PlayerCamControll.gd" id="8_qsy24"]
 [ext_resource type="Texture2D" uid="uid://dvce6bic8g2el" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree2/Layer 29.png" id="9_2ifor"]
+[ext_resource type="Script" uid="uid://b8ytejwtlp7dy" path="res://Scenes/tree_fall.gd" id="9_gidt0"]
+[ext_resource type="Texture2D" uid="uid://bflb3mby3aois" path="res://assets/Scene Assets/Forest/Treefallanim copy.png" id="9_vr0cu"]
 [ext_resource type="Texture2D" uid="uid://ojefhq0jhb5r" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree2/Layer 28.png" id="10_6m4iw"]
 [ext_resource type="Texture2D" uid="uid://cslf0gap4ovfu" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree2/Layer 27.png" id="11_gidt0"]
+[ext_resource type="AudioStream" uid="uid://ovxjapjy2vpb" path="res://assets/Audio/Sound FX/TreeFall/TreeFalling3.wav" id="11_vr0cu"]
 [ext_resource type="Texture2D" uid="uid://di3kn5x63xp6x" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree2/Layer 26.png" id="12_hsl1u"]
 [ext_resource type="Texture2D" uid="uid://djd5ifqphr6uo" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree2/Layer 24.png" id="13_18ofl"]
 [ext_resource type="Texture2D" uid="uid://28douf6ksnbd" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree2/Bigger tree.png" id="14_vr0cu"]
@@ -22,9 +26,10 @@
 [ext_resource type="Texture2D" uid="uid://bcixdr7ueb5ha" path="res://assets/Scene Assets/Tilesets/Test tilesets/Plants/Ground/Layer 4.png" id="20_qsy24"]
 [ext_resource type="Texture2D" uid="uid://cuwlmicresg7y" path="res://assets/Scene Assets/Tilesets/Test tilesets/Plants/Ground/Layer 5.png" id="21_2ifor"]
 [ext_resource type="PackedScene" uid="uid://byc3xg7s28iup" path="res://Scenes/firefly.tscn" id="22_2ifor"]
+[ext_resource type="Script" uid="uid://dq1s6lp8mkva4" path="res://Scenes/Treept2.gd" id="26_sv6bm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6m4iw"]
-size = Vector3(160.147, 12.3462, 44.1948)
+size = Vector3(402.475, 12.3462, 44.1948)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qsy24"]
 albedo_color = Color(0.00215795, 0.0764183, 0.0672555, 1)
@@ -34,243 +39,201 @@ size = Vector2(32.335, 55.07)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6m4iw"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjp06"]
+atlas = ExtResource("8_18ofl")
+region = Rect2(0, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bdsg"]
+atlas = ExtResource("8_18ofl")
+region = Rect2(3000, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4axmb"]
+atlas = ExtResource("8_18ofl")
+region = Rect2(6000, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mw4gg"]
+atlas = ExtResource("8_18ofl")
+region = Rect2(0, 3000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5l5q"]
+atlas = ExtResource("8_18ofl")
+region = Rect2(3000, 3000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0rye"]
+atlas = ExtResource("8_18ofl")
+region = Rect2(6000, 3000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tckxd"]
+atlas = ExtResource("8_18ofl")
+region = Rect2(0, 6000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d28kw"]
+atlas = ExtResource("8_18ofl")
+region = Rect2(3000, 6000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8d2i"]
+atlas = ExtResource("8_18ofl")
+region = Rect2(6000, 6000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etodt"]
+atlas = ExtResource("8_18ofl")
+region = Rect2(0, 9000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plwrq"]
+atlas = ExtResource("8_18ofl")
+region = Rect2(3000, 9000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8sm8o"]
+atlas = ExtResource("8_18ofl")
+region = Rect2(6000, 9000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahrbf"]
+atlas = ExtResource("8_18ofl")
+region = Rect2(0, 12000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xs1rx"]
+atlas = ExtResource("8_18ofl")
+region = Rect2(3000, 12000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2hft"]
+atlas = ExtResource("9_vr0cu")
+region = Rect2(0, 9000, 3000, 3000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ecg0l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjp06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5bdsg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4axmb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mw4gg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5l5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0rye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tckxd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d28kw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8d2i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etodt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plwrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8sm8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahrbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xs1rx")
+}],
+"loop": false,
+"name": &"default",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2hft")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gidt0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dicr5"]
+atlas = ExtResource("9_vr0cu")
+region = Rect2(0, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecg0l"]
+atlas = ExtResource("9_vr0cu")
+region = Rect2(3000, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkxlt"]
+atlas = ExtResource("9_vr0cu")
+region = Rect2(6000, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nn3xn"]
+atlas = ExtResource("9_vr0cu")
+region = Rect2(0, 3000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qv854"]
+atlas = ExtResource("9_vr0cu")
+region = Rect2(3000, 3000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlkco"]
+atlas = ExtResource("9_vr0cu")
+region = Rect2(6000, 3000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgxoy"]
+atlas = ExtResource("9_vr0cu")
+region = Rect2(0, 6000, 3000, 3000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sfres"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dicr5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecg0l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkxlt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nn3xn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qv854")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlkco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgxoy")
+}],
+"loop": false,
+"name": &"default",
+"speed": 7.0
+}]
+
 [node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 256.408, 18.7578, 0)
 
 [node name="Player" parent="." instance=ExtResource("7_08kc0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5046, -16.817, -0.0177765)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.328, -19.096, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, -2.13163e-14, 0, 1, 0, 2.13163e-14, 0, 1, 9.39438, -16.3438, 51.1048)
+transform = Transform3D(1, 0, -2.13163e-14, 0, 1, 0, 2.13163e-14, 0, 1, -35.4384, -16.3438, 51.1048)
 current = true
 size = 50.714
 script = ExtResource("8_qsy24")
 target_path = NodePath("../Player")
-
-[node name="Bigtree" type="Sprite3D" parent="."]
-transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, -39.0002, 17.2889, -12.5604)
-shaded = true
-render_priority = 1
-texture = ExtResource("9_2ifor")
-
-[node name="Sprite3D8" type="Sprite3D" parent="Bigtree"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
-shaded = true
-render_priority = 1
-texture = ExtResource("10_6m4iw")
-
-[node name="Sprite3D9" type="Sprite3D" parent="Bigtree"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
-shaded = true
-render_priority = 1
-texture = ExtResource("11_gidt0")
-
-[node name="Sprite3D10" type="Sprite3D" parent="Bigtree"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
-shaded = true
-render_priority = 1
-texture = ExtResource("12_hsl1u")
-
-[node name="Sprite3D11" type="Sprite3D" parent="Bigtree"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
-shaded = true
-render_priority = 1
-texture = ExtResource("13_18ofl")
-
-[node name="Sprite3D12" type="Sprite3D" parent="Bigtree"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864)
-shaded = true
-texture = ExtResource("14_vr0cu")
-
-[node name="Bigtree2" type="Sprite3D" parent="."]
-transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 2.99456, 11.4691, -19.0354)
-shaded = true
-render_priority = 1
-texture = ExtResource("9_2ifor")
-
-[node name="Sprite3D8" type="Sprite3D" parent="Bigtree2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
-shaded = true
-render_priority = 1
-texture = ExtResource("10_6m4iw")
-
-[node name="Sprite3D9" type="Sprite3D" parent="Bigtree2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
-shaded = true
-render_priority = 1
-texture = ExtResource("11_gidt0")
-
-[node name="Sprite3D10" type="Sprite3D" parent="Bigtree2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
-shaded = true
-render_priority = 1
-texture = ExtResource("12_hsl1u")
-
-[node name="Sprite3D11" type="Sprite3D" parent="Bigtree2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
-shaded = true
-render_priority = 1
-texture = ExtResource("13_18ofl")
-
-[node name="Sprite3D12" type="Sprite3D" parent="Bigtree2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864)
-shaded = true
-texture = ExtResource("14_vr0cu")
-
-[node name="Bigtree5" type="Sprite3D" parent="."]
-transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 48.6633, 11.4691, -19.0354)
-shaded = true
-render_priority = 1
-texture = ExtResource("9_2ifor")
-
-[node name="Sprite3D8" type="Sprite3D" parent="Bigtree5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
-shaded = true
-render_priority = 1
-texture = ExtResource("10_6m4iw")
-
-[node name="Sprite3D9" type="Sprite3D" parent="Bigtree5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
-shaded = true
-render_priority = 1
-texture = ExtResource("11_gidt0")
-
-[node name="Sprite3D10" type="Sprite3D" parent="Bigtree5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
-shaded = true
-render_priority = 1
-texture = ExtResource("12_hsl1u")
-
-[node name="Sprite3D11" type="Sprite3D" parent="Bigtree5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
-shaded = true
-render_priority = 1
-texture = ExtResource("13_18ofl")
-
-[node name="Sprite3D12" type="Sprite3D" parent="Bigtree5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864)
-shaded = true
-texture = ExtResource("14_vr0cu")
-
-[node name="Bigtree3" type="Sprite3D" parent="."]
-transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 85.2443, 17.2889, -12.5604)
-shaded = true
-render_priority = 1
-texture = ExtResource("9_2ifor")
-
-[node name="Sprite3D8" type="Sprite3D" parent="Bigtree3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
-shaded = true
-render_priority = 1
-texture = ExtResource("10_6m4iw")
-
-[node name="Sprite3D9" type="Sprite3D" parent="Bigtree3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
-shaded = true
-render_priority = 1
-texture = ExtResource("11_gidt0")
-
-[node name="Sprite3D10" type="Sprite3D" parent="Bigtree3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
-shaded = true
-render_priority = 1
-texture = ExtResource("12_hsl1u")
-
-[node name="Sprite3D11" type="Sprite3D" parent="Bigtree3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
-shaded = true
-render_priority = 1
-texture = ExtResource("13_18ofl")
-
-[node name="Sprite3D12" type="Sprite3D" parent="Bigtree3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864)
-shaded = true
-texture = ExtResource("14_vr0cu")
-
-[node name="Bigtree4" type="Sprite3D" parent="."]
-transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 127.239, 11.4691, -19.0354)
-shaded = true
-render_priority = 1
-texture = ExtResource("9_2ifor")
-
-[node name="Sprite3D8" type="Sprite3D" parent="Bigtree4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
-shaded = true
-render_priority = 1
-texture = ExtResource("10_6m4iw")
-
-[node name="Sprite3D9" type="Sprite3D" parent="Bigtree4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
-shaded = true
-render_priority = 1
-texture = ExtResource("11_gidt0")
-
-[node name="Sprite3D10" type="Sprite3D" parent="Bigtree4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
-shaded = true
-render_priority = 1
-texture = ExtResource("12_hsl1u")
-
-[node name="Sprite3D11" type="Sprite3D" parent="Bigtree4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
-shaded = true
-render_priority = 1
-texture = ExtResource("13_18ofl")
-
-[node name="Sprite3D12" type="Sprite3D" parent="Bigtree4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864)
-shaded = true
-texture = ExtResource("14_vr0cu")
-
-[node name="SmallTree2" type="Sprite3D" parent="."]
-transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 21.2095, 8.46542, -3.39359)
-shaded = true
-render_priority = 1
-texture = ExtResource("1_gfl13")
-
-[node name="Sprite3D2" type="Sprite3D" parent="SmallTree2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.500389, 0, 0.970714)
-shaded = true
-render_priority = 2
-texture = ExtResource("2_4xied")
-
-[node name="Sprite3D3" type="Sprite3D" parent="SmallTree2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0867033, -0.501163, 2.56009)
-shaded = true
-render_priority = 2
-texture = ExtResource("3_pw6c3")
-
-[node name="Sprite3D4" type="Sprite3D" parent="SmallTree2"]
-shaded = true
-render_priority = 1
-texture = ExtResource("4_djgpu")
-
-[node name="Sprite3D5" type="Sprite3D" parent="SmallTree2"]
-shaded = true
-render_priority = 1
-texture = ExtResource("5_tnm7e")
-
-[node name="Sprite3D6" type="Sprite3D" parent="SmallTree2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.333595, -7.64328, -0.282732)
-shaded = true
-texture = ExtResource("6_j8t0e")
 
 [node name="Bush" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.20629, -28.2218, -1.22645)
 shaded = true
 render_priority = 1
 texture = ExtResource("15_j8t0e")
-
-[node name="SmallTree" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.81406, -25.8057, -2.46337)
-shaded = true
-render_priority = 1
-texture = ExtResource("16_08kc0")
-
-[node name="Sprite3D9" type="Sprite3D" parent="SmallTree"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.360467, 1.66636, 0.208168)
-shaded = true
-render_priority = 1
-texture = ExtResource("17_qsy24")
 
 [node name="Vines" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4953, -6.92893, -3.58068)
@@ -287,47 +250,71 @@ texture = ExtResource("19_6m4iw")
 [node name="Ground" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4986, -38.7989, 0.258677)
 shaded = true
-render_priority = 1
+render_priority = 2
 texture = ExtResource("20_qsy24")
 
 [node name="Ground" type="Sprite3D" parent="Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9939, -0.0136986, -0.0227356)
 shaded = true
-render_priority = 1
+render_priority = 2
+texture = ExtResource("20_qsy24")
+
+[node name="Ground7" type="Sprite3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.6428, -0.0136986, -0.0227356)
+shaded = true
+render_priority = 2
+texture = ExtResource("20_qsy24")
+
+[node name="Ground8" type="Sprite3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -119.643, -0.0136986, -0.0227356)
+shaded = true
+render_priority = 2
+texture = ExtResource("20_qsy24")
+
+[node name="Ground9" type="Sprite3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -139.623, -0.0136986, -0.0227356)
+shaded = true
+render_priority = 2
+texture = ExtResource("20_qsy24")
+
+[node name="Ground10" type="Sprite3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -159.189, -0.0136986, -0.0227356)
+shaded = true
+render_priority = 2
 texture = ExtResource("20_qsy24")
 
 [node name="Ground2" type="Sprite3D" parent="Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.9835, 7.62939e-05, -0.0227356)
 shaded = true
-render_priority = 1
+render_priority = 2
 texture = ExtResource("21_2ifor")
 
 [node name="Ground3" type="Sprite3D" parent="Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.7833, -0.0136986, -0.0227356)
 shaded = true
-render_priority = 1
+render_priority = 2
 texture = ExtResource("20_qsy24")
 
 [node name="Ground4" type="Sprite3D" parent="Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.7729, 7.62939e-05, -0.0227356)
 shaded = true
-render_priority = 1
+render_priority = 2
 texture = ExtResource("21_2ifor")
 
 [node name="Ground5" type="Sprite3D" parent="Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.9295, -0.0136986, -0.0227356)
 shaded = true
-render_priority = 1
+render_priority = 2
 texture = ExtResource("20_qsy24")
 
 [node name="Ground6" type="Sprite3D" parent="Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9399, 7.62939e-05, -0.0227356)
 shaded = true
-render_priority = 1
+render_priority = 2
 texture = ExtResource("21_2ifor")
 
 [node name="Ground2" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152.757, -38.7989, 0.258677)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152.085, -38.7989, 0.258677)
 shaded = true
 render_priority = 1
 texture = ExtResource("20_qsy24")
@@ -372,7 +359,7 @@ texture = ExtResource("21_2ifor")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21181, -18.5014, 4.65259)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3084, -16.5164, 2.71011)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.9822, -16.5164, 2.71011)
 shape = SubResource("BoxShape3D_6m4iw")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
@@ -391,36 +378,337 @@ spot_attenuation = 0.8
 spot_angle = 8.22835
 spot_angle_attenuation = 0.108818
 
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(0.908575, -0.241005, 0.341186, -0.245762, 0.35205, 0.90314, -0.337776, -0.904421, 0.260634, 79.3075, 65.0926, 24.807)
+light_color = Color(0.835294, 0.996078, 1, 1)
+light_energy = 20.0
+light_indirect_energy = 1.285
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 120.0
+distance_fade_shadow = 120.0
+spot_range = 4096.0
+spot_attenuation = 0.8
+spot_angle = 8.22835
+spot_angle_attenuation = 0.108818
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="."]
+transform = Transform3D(0.908575, -0.241005, 0.341186, -0.245762, 0.35205, 0.90314, -0.337776, -0.904421, 0.260634, -5.50139, 65.0926, 24.807)
+light_color = Color(0.835294, 0.996078, 1, 1)
+light_energy = 20.0
+light_indirect_energy = 1.285
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 120.0
+distance_fade_shadow = 120.0
+spot_range = 4096.0
+spot_attenuation = 0.8
+spot_angle = 8.22835
+spot_angle_attenuation = 0.108818
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.16837, 0, 0, 0, -4.37114e-08, -2.59172, 0, 1, -1.13288e-07, 0.312927, -1.90735e-06, -45.9482)
+transform = Transform3D(25.4025, 0, 0, 0, -4.37114e-08, -7.77544, 0, 1, -3.39876e-07, 0.312927, -1.90735e-06, -45.9482)
 material_override = SubResource("StandardMaterial3D_qsy24")
 mesh = SubResource("PlaneMesh_2ifor")
 surface_material_override/0 = SubResource("ShaderMaterial_6m4iw")
 
-[node name="Firefly" parent="." instance=ExtResource("22_2ifor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.62612)
-
-[node name="Firefly2" parent="." instance=ExtResource("22_2ifor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5102, -11.7756, -7.62612)
-
-[node name="Firefly3" parent="." instance=ExtResource("22_2ifor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -16.1182, -7.62612)
-
-[node name="Firefly4" parent="." instance=ExtResource("22_2ifor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5968, 0, -7.62612)
-
-[node name="Firefly5" parent="." instance=ExtResource("22_2ifor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.72156, -9.17341, -7.62612)
-
-[node name="Firefly6" parent="." instance=ExtResource("22_2ifor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9425, 1.84933, -4.17346)
-
-[node name="Firefly7" parent="." instance=ExtResource("22_2ifor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8548, -16.9179, -7.62612)
-
-[node name="Firefly8" parent="." instance=ExtResource("22_2ifor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4747, -21.9268, -7.62612)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -107.237, 54.4983, 0)
 light_energy = 0.1
+
+[node name="TreeFall" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(4.983, 0, 0, 0, 4.61, 0, 0, 0, 1.605, -40.3271, 16.0803, -2.90451)
+shaded = true
+render_priority = 1
+sprite_frames = SubResource("SpriteFrames_ecg0l")
+script = ExtResource("9_gidt0")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="TreeFall"]
+transform = Transform3D(0.200682, 0, 0, 0, 0.21692, 0, 0, 0, 0.623053, 8.09294, -3.48813, 1.80966)
+stream = ExtResource("11_vr0cu")
+volume_db = -12.907
+max_db = 0.76
+
+[node name="Timer3" type="Timer" parent="TreeFall"]
+wait_time = 0.83
+one_shot = true
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.165, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(7.79381, 0, 0, 0, 79.7113, 0, 0, 0, 30.3513, 29.0134, -18.5174, 0)
+shape = SubResource("BoxShape3D_gidt0")
+
+[node name="Fireflys" type="Node3D" parent="."]
+
+[node name="Firefly" parent="Fireflys" instance=ExtResource("22_2ifor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.62612)
+
+[node name="Firefly2" parent="Fireflys" instance=ExtResource("22_2ifor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5102, -11.7756, -7.62612)
+
+[node name="Firefly3" parent="Fireflys" instance=ExtResource("22_2ifor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -16.1182, -7.62612)
+
+[node name="Firefly4" parent="Fireflys" instance=ExtResource("22_2ifor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5968, 0, -7.62612)
+
+[node name="Firefly5" parent="Fireflys" instance=ExtResource("22_2ifor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.72156, -9.17341, -7.62612)
+
+[node name="Firefly6" parent="Fireflys" instance=ExtResource("22_2ifor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9425, 1.84933, -4.17346)
+
+[node name="Firefly7" parent="Fireflys" instance=ExtResource("22_2ifor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8548, -16.9179, -7.62612)
+
+[node name="Firefly8" parent="Fireflys" instance=ExtResource("22_2ifor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4747, -21.9268, -7.62612)
+
+[node name="Trees" type="Node3D" parent="."]
+
+[node name="Bigtree" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, -39.0002, 17.2889, -12.5604)
+shaded = true
+render_priority = 1
+texture = ExtResource("9_2ifor")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Trees/Bigtree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
+shaded = true
+render_priority = 1
+texture = ExtResource("10_6m4iw")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Trees/Bigtree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
+shaded = true
+render_priority = 1
+texture = ExtResource("11_gidt0")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Trees/Bigtree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
+shaded = true
+render_priority = 1
+texture = ExtResource("12_hsl1u")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Trees/Bigtree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
+shaded = true
+render_priority = 1
+texture = ExtResource("13_18ofl")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Trees/Bigtree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864)
+shaded = true
+texture = ExtResource("14_vr0cu")
+
+[node name="Bigtree2" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 2.99456, 11.4691, -19.0354)
+shaded = true
+render_priority = 1
+texture = ExtResource("9_2ifor")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Trees/Bigtree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
+shaded = true
+render_priority = 1
+texture = ExtResource("10_6m4iw")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Trees/Bigtree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
+shaded = true
+render_priority = 1
+texture = ExtResource("11_gidt0")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Trees/Bigtree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
+shaded = true
+render_priority = 1
+texture = ExtResource("12_hsl1u")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Trees/Bigtree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
+shaded = true
+render_priority = 1
+texture = ExtResource("13_18ofl")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Trees/Bigtree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864)
+shaded = true
+texture = ExtResource("14_vr0cu")
+
+[node name="Bigtree5" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 48.6633, 11.4691, -19.0354)
+shaded = true
+render_priority = 1
+texture = ExtResource("9_2ifor")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Trees/Bigtree5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
+shaded = true
+render_priority = 1
+texture = ExtResource("10_6m4iw")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Trees/Bigtree5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
+shaded = true
+render_priority = 1
+texture = ExtResource("11_gidt0")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Trees/Bigtree5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
+shaded = true
+render_priority = 1
+texture = ExtResource("12_hsl1u")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Trees/Bigtree5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
+shaded = true
+render_priority = 1
+texture = ExtResource("13_18ofl")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Trees/Bigtree5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864)
+shaded = true
+texture = ExtResource("14_vr0cu")
+
+[node name="Bigtree3" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 85.2443, 17.2889, -12.5604)
+shaded = true
+render_priority = 1
+texture = ExtResource("9_2ifor")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Trees/Bigtree3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
+shaded = true
+render_priority = 1
+texture = ExtResource("10_6m4iw")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Trees/Bigtree3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
+shaded = true
+render_priority = 1
+texture = ExtResource("11_gidt0")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Trees/Bigtree3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
+shaded = true
+render_priority = 1
+texture = ExtResource("12_hsl1u")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Trees/Bigtree3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
+shaded = true
+render_priority = 1
+texture = ExtResource("13_18ofl")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Trees/Bigtree3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864)
+shaded = true
+texture = ExtResource("14_vr0cu")
+
+[node name="Bigtree4" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 127.239, 11.4691, -19.0354)
+shaded = true
+render_priority = 1
+texture = ExtResource("9_2ifor")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Trees/Bigtree4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
+shaded = true
+render_priority = 1
+texture = ExtResource("10_6m4iw")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Trees/Bigtree4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
+shaded = true
+render_priority = 1
+texture = ExtResource("11_gidt0")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Trees/Bigtree4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
+shaded = true
+render_priority = 1
+texture = ExtResource("12_hsl1u")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Trees/Bigtree4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
+shaded = true
+render_priority = 1
+texture = ExtResource("13_18ofl")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Trees/Bigtree4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864)
+shaded = true
+texture = ExtResource("14_vr0cu")
+
+[node name="SmallTree2" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 21.2095, 8.46542, -3.39359)
+shaded = true
+render_priority = 1
+texture = ExtResource("1_gfl13")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Trees/SmallTree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.500389, 0, 0.970714)
+shaded = true
+render_priority = 2
+texture = ExtResource("2_4xied")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Trees/SmallTree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0867033, -0.501163, 2.56009)
+shaded = true
+render_priority = 2
+texture = ExtResource("3_pw6c3")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Trees/SmallTree2"]
+shaded = true
+render_priority = 1
+texture = ExtResource("4_djgpu")
+
+[node name="Sprite3D5" type="Sprite3D" parent="Trees/SmallTree2"]
+shaded = true
+render_priority = 1
+texture = ExtResource("5_tnm7e")
+
+[node name="Sprite3D6" type="Sprite3D" parent="Trees/SmallTree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.333595, -7.64328, -0.282732)
+shaded = true
+texture = ExtResource("6_j8t0e")
+
+[node name="SmallTree" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.81406, -25.8057, -2.46337)
+shaded = true
+render_priority = 1
+texture = ExtResource("16_08kc0")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Trees/SmallTree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.360467, 1.66636, 0.208168)
+shaded = true
+render_priority = 1
+texture = ExtResource("17_qsy24")
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 2.05
+one_shot = true
+
+[node name="TreeFall2" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(3.79, 0, 0, 0, 3.79, 0, 0, 0, 3.79, -40.5705, 9.27398, 1.94957)
+transparency = 1.0
+shaded = true
+render_priority = 3
+sprite_frames = SubResource("SpriteFrames_sfres")
+frame = 6
+frame_progress = 1.0
+script = ExtResource("26_sv6bm")
+
+[connection signal="animation_finished" from="TreeFall" to="TreeFall" method="_on_animation_finished"]
+[connection signal="animation_finished" from="TreeFall" to="TreeFall2" method="_on_tree_fall_animation_finished"]
+[connection signal="timeout" from="TreeFall/Timer3" to="TreeFall" method="_on_timer_3_timeout"]
+[connection signal="area_exited" from="Area3D" to="Camera3D" method="_on_area_3d_area_exited"]
+[connection signal="area_exited" from="Area3D" to="TreeFall" method="_on_area_3d_area_exited"]
+[connection signal="timeout" from="Timer2" to="Camera3D" method="_on_timer_2_timeout"]

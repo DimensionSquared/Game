@@ -1,14 +1,17 @@
-[gd_scene load_steps=18 format=3 uid="uid://rwrgrgogyffm"]
+[gd_scene load_steps=21 format=3 uid="uid://rwrgrgogyffm"]
 
 [ext_resource type="PackedScene" uid="uid://y7yahejeiy3j" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://bb5eudmnig2uu" path="res://assets/Scene Assets/Tilesets/Test tilesets/Brick1.png" id="2_3dryh"]
 [ext_resource type="Texture2D" uid="uid://b38g1ot7e55qs" path="res://assets/Scene Assets/Tilesets/Test tilesets/BasicBrickroadtiles.png" id="2_qxrlw"]
-[ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://Scripts/PlayerCamControll.gd" id="3_wrm1d"]
+[ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://scripts/PlayerCamControll.gd" id="3_wrm1d"]
 [ext_resource type="Texture2D" uid="uid://cycxhvnr1qsmb" path="res://assets/Scene Assets/Tilesets/Test tilesets/House2.png" id="5_wowpa"]
 [ext_resource type="Script" uid="uid://br45710ya7k5c" path="res://Scenes/Change_loadscene.gd" id="6_i6g32"]
+[ext_resource type="Texture2D" uid="uid://depd7e6awfwp" path="res://assets/Street/StreetLamp.png" id="7_1l0tm"]
+[ext_resource type="Texture2D" uid="uid://wb1n210pqftw" path="res://assets/Scene Assets/Tilesets/Test tilesets/Plants/Ground/BrickFade.png" id="8_v158k"]
+[ext_resource type="Texture2D" uid="uid://bcixdr7ueb5ha" path="res://assets/Scene Assets/Tilesets/Test tilesets/Plants/Ground/Layer 4.png" id="9_h4fw4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wrm1d"]
-size = Vector3(160.147, 12.3462, 44.1948)
+size = Vector3(263.992, 12.6111, 44.1948)
 
 [sub_resource type="Curve" id="Curve_wowpa"]
 _limits = [-360.0, 360.0, 0.0, 1.0]
@@ -82,63 +85,63 @@ shaded = true
 texture = ExtResource("2_qxrlw")
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.31477, -20.5348, 0.105831)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99966, -20.2171, 0.0657614)
 shaded = true
-render_priority = 2
+render_priority = 3
 texture = ExtResource("2_3dryh")
 
 [node name="Sprite3D3" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6329, -20.5348, 0.105831)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.948, -20.2171, 0.0657614)
 shaded = true
-render_priority = 2
+render_priority = 3
 texture = ExtResource("2_3dryh")
 
 [node name="Sprite3D7" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5448, -20.5348, 0.105831)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.8599, -20.2171, 0.0657614)
 shaded = true
-render_priority = 2
+render_priority = 3
 texture = ExtResource("2_3dryh")
 
 [node name="Sprite3D9" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.9648, -20.5348, 0.105831)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.2799, -20.2171, 0.0657614)
 shaded = true
-render_priority = 2
+render_priority = 3
 texture = ExtResource("2_3dryh")
 
 [node name="Sprite3D10" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.3347, -20.5348, 0.105831)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.6498, -20.2171, 0.0657614)
 shaded = true
-render_priority = 2
+render_priority = 3
 texture = ExtResource("2_3dryh")
 
 [node name="Sprite3D4" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.1987, -20.5348, 0.105831)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.8836, -20.2171, 0.0657614)
 shaded = true
-render_priority = 2
+render_priority = 3
 texture = ExtResource("2_3dryh")
 
 [node name="Sprite3D6" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.0575, -20.5348, 0.105831)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.7424, -20.2171, 0.0657614)
 shaded = true
-render_priority = 2
+render_priority = 3
 texture = ExtResource("2_3dryh")
 
 [node name="Sprite3D8" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.8429, -20.5348, 0.105831)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.5278, -20.2171, 0.0657614)
 shaded = true
-render_priority = 2
+render_priority = 3
 texture = ExtResource("2_3dryh")
 
 [node name="Sprite3D11" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.0406, -20.5348, 0.105831)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.7255, -20.2171, 0.0657614)
 shaded = true
-render_priority = 2
+render_priority = 3
 texture = ExtResource("2_3dryh")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3084, -16.5164, 2.71011)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.6139, -16.384, 2.71011)
 shape = SubResource("BoxShape3D_wrm1d")
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -170,18 +173,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.84126, -11.325, -1.14172)
 visible = false
 size = Vector3(108.057, 2, 21.5057)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(0.908575, -0.241005, 0.341187, -0.157652, 0.558537, 0.81436, -0.38683, -0.793696, 0.469478, 13.0108, 27.6073, 22.0282)
-light_color = Color(1, 0.996078, 0.823529, 1)
-light_energy = 28.345
-light_indirect_energy = 1.285
-shadow_enabled = true
-distance_fade_enabled = true
-spot_range = 54.6971
-spot_angle = 23.8108
-
 [node name="SpotLight3D2" type="SpotLight3D" parent="."]
 transform = Transform3D(0.908575, -0.241005, 0.341187, -0.157652, 0.558537, 0.81436, -0.38683, -0.793696, 0.469478, 34.4204, 32.1238, 11.5496)
+visible = false
 light_color = Color(1, 0.996078, 0.823529, 1)
 light_energy = 28.345
 light_indirect_energy = 1.285
@@ -215,7 +209,111 @@ shape = SubResource("SphereShape3D_i6g32")
 script = ExtResource("6_i6g32")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.1509, 3.57533, -1.40372)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123.441, 3.57533, -1.40372)
 shape = SubResource("BoxShape3D_1l0tm")
+
+[node name="StreetLamp" type="Sprite3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 11.0522, -1.39171, -0.0573783)
+shaded = true
+render_priority = 2
+texture = ExtResource("7_1l0tm")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="StreetLamp"]
+transform = Transform3D(0.735389, -0.387016, -0.0621691, 0.0263038, -0.0831476, 0.828757, -0.391094, -0.733314, -0.061159, -0.0720835, 7.28577, 0.753906)
+light_color = Color(1, 0.917647, 0.607843, 1)
+light_energy = 6.7
+light_indirect_energy = 1.285
+light_size = 1.0
+shadow_enabled = true
+distance_fade_enabled = true
+spot_range = 66.78
+spot_attenuation = 0.7
+spot_angle = 79.11
+
+[node name="StreetLamp2" type="Sprite3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 37.7346, -1.39171, -0.0573783)
+shaded = true
+render_priority = 2
+texture = ExtResource("7_1l0tm")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="StreetLamp2"]
+transform = Transform3D(0.735389, -0.387016, -0.0621691, 0.0263038, -0.0831476, 0.828757, -0.391094, -0.733314, -0.061159, -0.0720835, 7.28577, 0.753906)
+light_color = Color(1, 0.917647, 0.607843, 1)
+light_energy = 6.7
+light_indirect_energy = 1.285
+light_size = 1.0
+shadow_enabled = true
+distance_fade_enabled = true
+spot_range = 66.78
+spot_attenuation = 0.7
+spot_angle = 79.11
+
+[node name="StreetLamp3" type="Sprite3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 65.4145, -1.39171, -0.0573783)
+shaded = true
+render_priority = 2
+texture = ExtResource("7_1l0tm")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="StreetLamp3"]
+transform = Transform3D(0.735389, -0.387016, -0.0621691, 0.0263038, -0.0831476, 0.828757, -0.391094, -0.733314, -0.061159, -0.0720835, 7.28577, 0.753906)
+light_color = Color(1, 0.917647, 0.607843, 1)
+light_energy = 6.7
+light_indirect_energy = 1.285
+light_size = 1.0
+shadow_enabled = true
+distance_fade_enabled = true
+spot_range = 66.78
+spot_attenuation = 0.7
+spot_angle = 79.11
+
+[node name="StreetLamp4" type="Sprite3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 97.2903, -1.57157, -0.0573783)
+shaded = true
+render_priority = 2
+texture = ExtResource("7_1l0tm")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="StreetLamp4"]
+transform = Transform3D(0.735389, -0.387016, -0.0621691, 0.0263038, -0.0831476, 0.828757, -0.391094, -0.733314, -0.061159, -0.0720835, 7.28577, 0.753906)
+light_color = Color(1, 0.917647, 0.607843, 1)
+light_energy = 6.7
+light_indirect_energy = 1.285
+light_size = 1.0
+shadow_enabled = true
+distance_fade_enabled = true
+spot_range = 66.78
+spot_attenuation = 0.7
+spot_angle = 79.11
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0918, 5.4807, -0.148724)
+visible = false
+light_color = Color(1, 0.815686, 0.384314, 1)
+light_energy = 86.09
+light_size = 9.575
+omni_range = 0.232956
+
+[node name="Sprite3D12" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96.664, -20.242, 0.066)
+shaded = true
+render_priority = 1
+texture = ExtResource("8_v158k")
+
+[node name="Ground" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.427, -20.1646, -0.0227356)
+shaded = true
+render_priority = 1
+texture = ExtResource("9_h4fw4")
+
+[node name="Ground2" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 136.388, -20.1646, -0.0227356)
+shaded = true
+render_priority = 1
+texture = ExtResource("9_h4fw4")
+
+[node name="Ground3" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 156.338, -20.1646, -0.0227356)
+shaded = true
+render_priority = 1
+texture = ExtResource("9_h4fw4")
 
 [connection signal="area_entered" from="Area3D2" to="Area3D2" method="_on_area_entered"]

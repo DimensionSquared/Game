@@ -10,6 +10,25 @@ var direction_changed = false
 var direction = 0
 var is_full_running = false
 
+
+
+var footstep_sounds: Array = [
+	preload("res://assets/Audio/Sound FX/Footsteps/Footsteps1.wav"),
+	preload("res://assets/Audio/Sound FX/Footsteps/Footsteps2.wav"),
+	preload("res://assets/Audio/Sound FX/Footsteps/Footsteps3.wav"),
+	preload("res://assets/Audio/Sound FX/Footsteps/Footsteps4.wav"),
+	preload("res://assets/Audio/Sound FX/Footsteps/Footsteps5.wav"),
+	preload("res://assets/Audio/Sound FX/Footsteps/Footsteps6.wav"),
+	preload("res://assets/Audio/Sound FX/Footsteps/Footsteps7.wav"),
+	preload("res://assets/Audio/Sound FX/Footsteps/Footsteps8.wav")
+]
+
+var soundplayer: AudioStreamPlayer3D
+	
+func _ready() -> void:
+	randomize()
+	soundplayer = $AnimatedSprite3D/AudioStreamPlayer3D
+	
 	
 func _physics_process(delta: float) -> void:
 	#collecting input dir
@@ -84,3 +103,12 @@ func _on_animated_sprite_3d_animation_finished():
 	
 	
 	
+
+
+func _on_animated_sprite_3d_frame_changed() -> void:
+	if $AnimatedSprite3D.frame == 4 or $AnimatedSprite3D.frame == 9:
+		if direction != 0:
+			print(direction)
+			var random_sound = randi() % footstep_sounds.size()
+			soundplayer.stream = footstep_sounds[random_sound]
+			soundplayer.play()

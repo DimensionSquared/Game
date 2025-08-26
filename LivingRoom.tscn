@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dsa0y2jhyktcq"]
+[gd_scene load_steps=27 format=3 uid="uid://dsa0y2jhyktcq"]
 
 [ext_resource type="Texture2D" uid="uid://wrigsrvy7k6r" path="res://assets/HouseAssets/LivingRoom/Living room.png" id="1_3ysdx"]
 [ext_resource type="Texture2D" uid="uid://udgeyll6rhns" path="res://assets/HouseAssets/LivingRoom/Door-1.png" id="2_yosbh"]
@@ -10,26 +10,118 @@
 [ext_resource type="Texture2D" uid="uid://dy75yf2xho5hm" path="res://assets/HouseAssets/LivingRoom/Sideways door.png" id="8_r5w0m"]
 [ext_resource type="Texture2D" uid="uid://bo40m8nvfdvso" path="res://assets/HouseAssets/LivingRoom/Table.png" id="9_u764j"]
 [ext_resource type="Texture2D" uid="uid://cr7bp0pivnkdc" path="res://assets/HouseAssets/LivingRoom/Hinges.png" id="10_8oolt"]
-[ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://Scripts/PlayerCamControll.gd" id="11_41126"]
+[ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://scripts/PlayerCamControll.gd" id="11_41126"]
 [ext_resource type="PackedScene" uid="uid://y7yahejeiy3j" path="res://Scenes/player.tscn" id="12_fqrew"]
+[ext_resource type="Texture2D" uid="uid://rhwktl8fstfu" path="res://assets/Characters/Background/Characters.png" id="13_fqrew"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_edsqu"]
 size = Vector3(160.147, 12.3462, 44.1948)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edsqu"]
+atlas = ExtResource("13_fqrew")
+region = Rect2(4000, 2000, 2000, 2000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jcixc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edsqu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lq3q6"]
+atlas = ExtResource("13_fqrew")
+region = Rect2(0, 4000, 2000, 2000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r5w0m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lq3q6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u764j"]
+atlas = ExtResource("13_fqrew")
+region = Rect2(2000, 2000, 2000, 2000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8oolt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u764j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2djvu"]
+atlas = ExtResource("13_fqrew")
+region = Rect2(0, 2000, 2000, 2000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d1s6f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2djvu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kh8ls"]
+atlas = ExtResource("13_fqrew")
+region = Rect2(4000, 0, 2000, 2000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f1ju2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kh8ls")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdiur"]
+atlas = ExtResource("13_fqrew")
+region = Rect2(2000, 0, 2000, 2000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v2ijq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdiur")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 shaded = true
+render_priority = -1
 texture = ExtResource("1_3ysdx")
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2701, -2.49643, 1.1814)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5745, -3.04902, 0.114176)
 shaded = true
 render_priority = 1
 texture = ExtResource("2_yosbh")
 
 [node name="Sprite3D3" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.1329, -2.63067, 1.0123)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.1329, -2.39351, 0.352444)
 shaded = true
 render_priority = 1
 texture = ExtResource("3_41126")
@@ -59,19 +151,18 @@ render_priority = 2
 texture = ExtResource("7_lq3q6")
 
 [node name="Sprite3D6" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5974, -2.06754, 0.40451)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4747, -2.06754, 0.0934887)
 shaded = true
-render_priority = 1
 texture = ExtResource("8_r5w0m")
 
 [node name="Sprite3D9" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.66996, 2.20032)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.41845, 2.20032)
 shaded = true
 render_priority = 1
 texture = ExtResource("9_u764j")
 
 [node name="Sprite3D10" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5184, -1.45836, 0.914398)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5184, -1.45836, 0.254542)
 shaded = true
 render_priority = 1
 texture = ExtResource("10_8oolt")
@@ -105,3 +196,36 @@ target_path = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("12_fqrew")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.6245, -0.307488, 3.74241)
+
+[node name="Characters" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1786, 0)
+
+[node name="Mum" type="AnimatedSprite3D" parent="Characters"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -4.40418, -2.65305, 6.06271)
+render_priority = 1
+sprite_frames = SubResource("SpriteFrames_jcixc")
+
+[node name="Dad" type="AnimatedSprite3D" parent="Characters"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6.73994, -5.04022, 4.25419)
+render_priority = 1
+sprite_frames = SubResource("SpriteFrames_r5w0m")
+
+[node name="Char3" type="AnimatedSprite3D" parent="Characters"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.71145, -3.15049, 4.25419)
+render_priority = 1
+sprite_frames = SubResource("SpriteFrames_8oolt")
+
+[node name="Char4" type="AnimatedSprite3D" parent="Characters"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5581, -2.73595, 4.25419)
+render_priority = 1
+sprite_frames = SubResource("SpriteFrames_d1s6f")
+
+[node name="Char5" type="AnimatedSprite3D" parent="Characters"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3689, -3.08251, 4.67392)
+render_priority = 1
+sprite_frames = SubResource("SpriteFrames_f1ju2")
+
+[node name="Char6" type="AnimatedSprite3D" parent="Characters"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -9.94893, -3.81375, 5.28751)
+render_priority = 1
+sprite_frames = SubResource("SpriteFrames_v2ijq")

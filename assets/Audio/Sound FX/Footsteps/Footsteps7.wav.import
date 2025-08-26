@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bugwmte5k60l1"
+path="res://.godot/imported/Footsteps7.wav-f9fa6b035ed141b9b8ad7d5d825e4a29.sample"
+
+[deps]
+
+source_file="res://assets/Audio/Sound FX/Footsteps/Footsteps7.wav"
+dest_files=["res://.godot/imported/Footsteps7.wav-f9fa6b035ed141b9b8ad7d5d825e4a29.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
