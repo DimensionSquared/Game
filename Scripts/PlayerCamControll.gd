@@ -41,11 +41,9 @@ func _physics_process(delta: float) -> void:
 	shakebefore = shake
 
 
-func _on_area_3d_area_exited(area: Area3D) -> void:
+func _on_area_3d_3_area_exited(area: Area3D) -> void:
 	var timer2 = get_parent().get_node("Timer2")
 	timer2.start()
-	
-	
 
 
 func _on_timer_2_timeout() -> void:

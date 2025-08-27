@@ -473,7 +473,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4747, -21.9268, -7.62612)
 [node name="Trees" type="Node3D" parent="."]
 
 [node name="Bigtree" type="Sprite3D" parent="Trees"]
-transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, -39.0002, 17.2889, -12.5604)
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, -39.0002, 19.0702, -12.5604)
 shaded = true
 render_priority = 1
 texture = ExtResource("9_2ifor")
@@ -508,33 +508,28 @@ shaded = true
 texture = ExtResource("14_vr0cu")
 
 [node name="Bigtree2" type="Sprite3D" parent="Trees"]
-transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 2.99456, 11.4691, -19.0354)
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 2.99457, 19.4305, -19.0354)
 shaded = true
-render_priority = 1
 texture = ExtResource("9_2ifor")
 
 [node name="Sprite3D8" type="Sprite3D" parent="Trees/Bigtree2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
 shaded = true
-render_priority = 1
 texture = ExtResource("10_6m4iw")
 
 [node name="Sprite3D9" type="Sprite3D" parent="Trees/Bigtree2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
 shaded = true
-render_priority = 1
 texture = ExtResource("11_gidt0")
 
 [node name="Sprite3D10" type="Sprite3D" parent="Trees/Bigtree2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
 shaded = true
-render_priority = 1
 texture = ExtResource("12_hsl1u")
 
 [node name="Sprite3D11" type="Sprite3D" parent="Trees/Bigtree2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
 shaded = true
-render_priority = 1
 texture = ExtResource("13_18ofl")
 
 [node name="Sprite3D12" type="Sprite3D" parent="Trees/Bigtree2"]
@@ -543,7 +538,7 @@ shaded = true
 texture = ExtResource("14_vr0cu")
 
 [node name="Bigtree5" type="Sprite3D" parent="Trees"]
-transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 48.6633, 11.4691, -19.0354)
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 48.6633, 17.3464, -19.0354)
 shaded = true
 render_priority = 1
 texture = ExtResource("9_2ifor")
@@ -578,7 +573,7 @@ shaded = true
 texture = ExtResource("14_vr0cu")
 
 [node name="Bigtree3" type="Sprite3D" parent="Trees"]
-transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 85.2443, 17.2889, -12.5604)
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 85.2443, 19.168, -12.5604)
 shaded = true
 render_priority = 1
 texture = ExtResource("9_2ifor")
@@ -613,7 +608,7 @@ shaded = true
 texture = ExtResource("14_vr0cu")
 
 [node name="Bigtree4" type="Sprite3D" parent="Trees"]
-transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 127.239, 11.4691, -19.0354)
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 127.239, 19.4827, -19.0354)
 shaded = true
 render_priority = 1
 texture = ExtResource("9_2ifor")
@@ -648,9 +643,9 @@ shaded = true
 texture = ExtResource("14_vr0cu")
 
 [node name="SmallTree2" type="Sprite3D" parent="Trees"]
-transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 21.2095, 8.46542, -3.39359)
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 21.2095, 9.49855, -3.39359)
 shaded = true
-render_priority = 1
+render_priority = 3
 texture = ExtResource("1_gfl13")
 
 [node name="Sprite3D2" type="Sprite3D" parent="Trees/SmallTree2"]

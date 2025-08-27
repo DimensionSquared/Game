@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://rwrgrgogyffm"]
+[gd_scene load_steps=74 format=3 uid="uid://rwrgrgogyffm"]
 
 [ext_resource type="PackedScene" uid="uid://y7yahejeiy3j" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://bb5eudmnig2uu" path="res://assets/Scene Assets/Tilesets/Test tilesets/Brick1.png" id="2_3dryh"]
@@ -9,9 +9,33 @@
 [ext_resource type="Texture2D" uid="uid://depd7e6awfwp" path="res://assets/Street/StreetLamp.png" id="7_1l0tm"]
 [ext_resource type="Texture2D" uid="uid://wb1n210pqftw" path="res://assets/Scene Assets/Tilesets/Test tilesets/Plants/Ground/BrickFade.png" id="8_v158k"]
 [ext_resource type="Texture2D" uid="uid://bcixdr7ueb5ha" path="res://assets/Scene Assets/Tilesets/Test tilesets/Plants/Ground/Layer 4.png" id="9_h4fw4"]
+[ext_resource type="Texture2D" uid="uid://codqav45rro6i" path="res://assets/Scene Assets/Tilesets/Test tilesets/Plants/Bushes/Layer 13.png" id="10_oeip8"]
+[ext_resource type="Texture2D" uid="uid://ccf1ll0mf7aay" path="res://assets/Scene Assets/Tilesets/Test tilesets/Plants/Vines/Vines.png" id="11_xe308"]
+[ext_resource type="Texture2D" uid="uid://bk7d81x76m8jr" path="res://assets/Scene Assets/Tilesets/Test tilesets/Plants/Vines/Vineleafs.png" id="12_d3cha"]
+[ext_resource type="Texture2D" uid="uid://cuwlmicresg7y" path="res://assets/Scene Assets/Tilesets/Test tilesets/Plants/Ground/Layer 5.png" id="13_i26dy"]
+[ext_resource type="Texture2D" uid="uid://c1hfur8extu0l" path="res://assets/Scene Assets/Forest/Treefallanim12.png" id="14_lmoi6"]
+[ext_resource type="Texture2D" uid="uid://bflb3mby3aois" path="res://assets/Scene Assets/Forest/Treefallanim copy.png" id="15_6uxt2"]
+[ext_resource type="Script" uid="uid://b8ytejwtlp7dy" path="res://Scenes/tree_fall.gd" id="16_ym3tv"]
+[ext_resource type="AudioStream" uid="uid://ovxjapjy2vpb" path="res://assets/Audio/Sound FX/TreeFall/TreeFalling3.wav" id="17_bwj6o"]
+[ext_resource type="PackedScene" uid="uid://byc3xg7s28iup" path="res://Scenes/firefly.tscn" id="18_f3c8l"]
+[ext_resource type="Texture2D" uid="uid://dvce6bic8g2el" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree2/Layer 29.png" id="19_bu0y5"]
+[ext_resource type="Texture2D" uid="uid://ojefhq0jhb5r" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree2/Layer 28.png" id="20_6a4tp"]
+[ext_resource type="Texture2D" uid="uid://cslf0gap4ovfu" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree2/Layer 27.png" id="21_631el"]
+[ext_resource type="Texture2D" uid="uid://di3kn5x63xp6x" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree2/Layer 26.png" id="22_vs120"]
+[ext_resource type="Texture2D" uid="uid://djd5ifqphr6uo" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree2/Layer 24.png" id="23_v2cs8"]
+[ext_resource type="Texture2D" uid="uid://28douf6ksnbd" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree2/Bigger tree.png" id="24_32sfa"]
+[ext_resource type="Texture2D" uid="uid://8ocxmljjeldb" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree1/Layer 18.png" id="25_titue"]
+[ext_resource type="Texture2D" uid="uid://bb1vnx5ncahiq" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree1/Layer 19.png" id="26_tt7mg"]
+[ext_resource type="Texture2D" uid="uid://dlkkcrfqg5sn5" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree1/Layer 20.png" id="27_htg8p"]
+[ext_resource type="Texture2D" uid="uid://domhlktuvueky" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree1/Layer 21.png" id="28_jcvim"]
+[ext_resource type="Texture2D" uid="uid://cth7fjpanfqgt" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree1/Layer 22.png" id="29_fnkle"]
+[ext_resource type="Texture2D" uid="uid://08vqhxrynnx3" path="res://assets/Scene Assets/Tilesets/Test tilesets/Tree1/smaller tree.png" id="30_wr3wg"]
+[ext_resource type="Texture2D" uid="uid://dmse7q55l3du4" path="res://assets/Scene Assets/Tilesets/Test tilesets/Plants/SmallTree/Layer 10.png" id="31_6xvgv"]
+[ext_resource type="Texture2D" uid="uid://csryr83e3ybpl" path="res://assets/Scene Assets/Tilesets/Test tilesets/Plants/SmallTree/TreeLeaves.png" id="32_8lpvs"]
+[ext_resource type="Script" uid="uid://dq1s6lp8mkva4" path="res://Scenes/Treept2.gd" id="33_x6jpx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wrm1d"]
-size = Vector3(263.992, 12.6111, 44.1948)
+size = Vector3(263.992, 12.8222, 44.1948)
 
 [sub_resource type="Curve" id="Curve_wowpa"]
 _limits = [-360.0, 360.0, 0.0, 1.0]
@@ -77,6 +101,194 @@ radius = 0.0314903
 [sub_resource type="BoxShape3D" id="BoxShape3D_1l0tm"]
 size = Vector3(11.6582, 53.6711, 19.9034)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_sjh24"]
+size = Vector3(402.475, 12.6082, 44.1948)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k5jl5"]
+albedo_color = Color(0.00215795, 0.0764183, 0.0672555, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nqk4g"]
+size = Vector2(32.335, 55.07)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fh6x0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjp06"]
+atlas = ExtResource("14_lmoi6")
+region = Rect2(0, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bdsg"]
+atlas = ExtResource("14_lmoi6")
+region = Rect2(3000, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4axmb"]
+atlas = ExtResource("14_lmoi6")
+region = Rect2(6000, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mw4gg"]
+atlas = ExtResource("14_lmoi6")
+region = Rect2(0, 3000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5l5q"]
+atlas = ExtResource("14_lmoi6")
+region = Rect2(3000, 3000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0rye"]
+atlas = ExtResource("14_lmoi6")
+region = Rect2(6000, 3000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tckxd"]
+atlas = ExtResource("14_lmoi6")
+region = Rect2(0, 6000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d28kw"]
+atlas = ExtResource("14_lmoi6")
+region = Rect2(3000, 6000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8d2i"]
+atlas = ExtResource("14_lmoi6")
+region = Rect2(6000, 6000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etodt"]
+atlas = ExtResource("14_lmoi6")
+region = Rect2(0, 9000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plwrq"]
+atlas = ExtResource("14_lmoi6")
+region = Rect2(3000, 9000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8sm8o"]
+atlas = ExtResource("14_lmoi6")
+region = Rect2(6000, 9000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahrbf"]
+atlas = ExtResource("14_lmoi6")
+region = Rect2(0, 12000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xs1rx"]
+atlas = ExtResource("14_lmoi6")
+region = Rect2(3000, 12000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2hft"]
+atlas = ExtResource("15_6uxt2")
+region = Rect2(0, 9000, 3000, 3000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j0obb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjp06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5bdsg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4axmb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mw4gg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5l5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0rye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tckxd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d28kw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8d2i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etodt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plwrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8sm8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahrbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xs1rx")
+}],
+"loop": false,
+"name": &"default",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2hft")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nfavm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dicr5"]
+atlas = ExtResource("15_6uxt2")
+region = Rect2(0, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecg0l"]
+atlas = ExtResource("15_6uxt2")
+region = Rect2(3000, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkxlt"]
+atlas = ExtResource("15_6uxt2")
+region = Rect2(6000, 0, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nn3xn"]
+atlas = ExtResource("15_6uxt2")
+region = Rect2(0, 3000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qv854"]
+atlas = ExtResource("15_6uxt2")
+region = Rect2(3000, 3000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlkco"]
+atlas = ExtResource("15_6uxt2")
+region = Rect2(6000, 3000, 3000, 3000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgxoy"]
+atlas = ExtResource("15_6uxt2")
+region = Rect2(0, 6000, 3000, 3000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jcn4n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dicr5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecg0l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkxlt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nn3xn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qv854")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlkco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgxoy")
+}],
+"loop": false,
+"name": &"default",
+"speed": 7.0
+}]
+
 [node name="Node3D" type="Node3D"]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
@@ -141,7 +353,7 @@ texture = ExtResource("2_3dryh")
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.6139, -16.384, 2.71011)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.6139, -16.2785, 2.71011)
 shape = SubResource("BoxShape3D_wrm1d")
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -209,7 +421,7 @@ shape = SubResource("SphereShape3D_i6g32")
 script = ExtResource("6_i6g32")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123.441, 3.57533, -1.40372)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123.441, 62.4497, -1.40372)
 shape = SubResource("BoxShape3D_1l0tm")
 
 [node name="StreetLamp" type="Sprite3D" parent="."]
@@ -269,7 +481,7 @@ spot_angle = 79.11
 [node name="StreetLamp4" type="Sprite3D" parent="."]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 97.2903, -1.57157, -0.0573783)
 shaded = true
-render_priority = 2
+render_priority = 1
 texture = ExtResource("7_1l0tm")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="StreetLamp4"]
@@ -295,7 +507,7 @@ omni_range = 0.232956
 [node name="Sprite3D12" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96.664, -20.242, 0.066)
 shaded = true
-render_priority = 1
+render_priority = 2
 texture = ExtResource("8_v158k")
 
 [node name="Ground" type="Sprite3D" parent="."]
@@ -316,4 +528,564 @@ shaded = true
 render_priority = 1
 texture = ExtResource("9_h4fw4")
 
+[node name="Bush" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 317.23, -9.58384, -1.77192)
+shaded = true
+render_priority = 1
+texture = ExtResource("10_oeip8")
+
+[node name="Vines" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 334.932, 11.709, -4.12615)
+shaded = true
+render_priority = 1
+texture = ExtResource("11_xe308")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Vines"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.882524, 0.142787, 0.300569)
+shaded = true
+render_priority = 1
+texture = ExtResource("12_d3cha")
+
+[node name="Ground4" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 334.935, -20.1609, -0.286798)
+shaded = true
+render_priority = 2
+texture = ExtResource("9_h4fw4")
+
+[node name="Ground" type="Sprite3D" parent="Ground4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9939, -0.0136986, -0.0227356)
+shaded = true
+render_priority = 2
+texture = ExtResource("9_h4fw4")
+
+[node name="Ground7" type="Sprite3D" parent="Ground4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.6428, -0.0136986, -0.0227356)
+shaded = true
+render_priority = 2
+texture = ExtResource("9_h4fw4")
+
+[node name="Ground8" type="Sprite3D" parent="Ground4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -119.643, -0.0136986, -0.0227356)
+shaded = true
+render_priority = 2
+texture = ExtResource("9_h4fw4")
+
+[node name="Ground9" type="Sprite3D" parent="Ground4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -139.623, -0.0136986, -0.0227356)
+shaded = true
+render_priority = 2
+texture = ExtResource("9_h4fw4")
+
+[node name="Ground10" type="Sprite3D" parent="Ground4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -159.189, -0.0136986, -0.0227356)
+shaded = true
+render_priority = 2
+texture = ExtResource("9_h4fw4")
+
+[node name="Ground2" type="Sprite3D" parent="Ground4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.9835, 7.62939e-05, -0.0227356)
+shaded = true
+render_priority = 2
+texture = ExtResource("13_i26dy")
+
+[node name="Ground3" type="Sprite3D" parent="Ground4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.7833, -0.0136986, -0.0227356)
+shaded = true
+render_priority = 2
+texture = ExtResource("9_h4fw4")
+
+[node name="Ground4" type="Sprite3D" parent="Ground4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.7729, 7.62939e-05, -0.0227356)
+shaded = true
+render_priority = 2
+texture = ExtResource("13_i26dy")
+
+[node name="Ground5" type="Sprite3D" parent="Ground4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.9295, -0.0136986, -0.0227356)
+shaded = true
+render_priority = 2
+texture = ExtResource("9_h4fw4")
+
+[node name="Ground6" type="Sprite3D" parent="Ground4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9399, 7.62939e-05, -0.0227356)
+shaded = true
+render_priority = 2
+texture = ExtResource("13_i26dy")
+
+[node name="Ground5" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 474.521, -20.1609, -0.286798)
+shaded = true
+render_priority = 2
+texture = ExtResource("9_h4fw4")
+
+[node name="Ground" type="Sprite3D" parent="Ground5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9939, -0.0136986, -0.0227356)
+shaded = true
+render_priority = 1
+texture = ExtResource("9_h4fw4")
+
+[node name="Ground2" type="Sprite3D" parent="Ground5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.9835, 7.62939e-05, -0.0227356)
+shaded = true
+render_priority = 2
+texture = ExtResource("13_i26dy")
+
+[node name="Ground3" type="Sprite3D" parent="Ground5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.7833, -0.0136986, -0.0227356)
+shaded = true
+render_priority = 2
+texture = ExtResource("9_h4fw4")
+
+[node name="Ground4" type="Sprite3D" parent="Ground5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.7729, 7.62939e-05, -0.0227356)
+shaded = true
+render_priority = 2
+texture = ExtResource("13_i26dy")
+
+[node name="Ground5" type="Sprite3D" parent="Ground5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.9295, -0.0136986, -0.0227356)
+shaded = true
+render_priority = 2
+texture = ExtResource("9_h4fw4")
+
+[node name="Ground6" type="Sprite3D" parent="Ground5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9399, 7.62939e-05, -0.0227356)
+shaded = true
+render_priority = 2
+texture = ExtResource("13_i26dy")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 321.224, 0.136562, 4.10711)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.9822, -16.3854, 2.71011)
+shape = SubResource("BoxShape3D_sjh24")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(0.908575, -0.241005, 0.341186, -0.245762, 0.35205, 0.90314, -0.337776, -0.904421, 0.260634, 358.983, 83.7306, 24.2615)
+light_color = Color(0.835294, 0.996078, 1, 1)
+light_energy = 20.0
+light_indirect_energy = 1.285
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 120.0
+distance_fade_shadow = 120.0
+spot_range = 4096.0
+spot_attenuation = 0.8
+spot_angle = 8.22835
+spot_angle_attenuation = 0.108818
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="."]
+transform = Transform3D(0.908575, -0.241005, 0.341186, -0.245762, 0.35205, 0.90314, -0.337776, -0.904421, 0.260634, 401.744, 83.7306, 24.2615)
+light_color = Color(0.835294, 0.996078, 1, 1)
+light_energy = 20.0
+light_indirect_energy = 1.285
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 120.0
+distance_fade_shadow = 120.0
+spot_range = 4096.0
+spot_attenuation = 0.8
+spot_angle = 8.22835
+spot_angle_attenuation = 0.108818
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="."]
+transform = Transform3D(0.908575, -0.241005, 0.341186, -0.245762, 0.35205, 0.90314, -0.337776, -0.904421, 0.260634, 316.935, 83.7306, 24.2615)
+light_color = Color(0.835294, 0.996078, 1, 1)
+light_energy = 20.0
+light_indirect_energy = 1.285
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 120.0
+distance_fade_shadow = 120.0
+spot_range = 4096.0
+spot_attenuation = 0.8
+spot_angle = 8.22835
+spot_angle_attenuation = 0.108818
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(25.4025, 0, 0, 0, -4.37114e-08, -7.77544, 0, 1, -3.39876e-07, 322.749, 18.638, -46.4937)
+material_override = SubResource("StandardMaterial3D_k5jl5")
+mesh = SubResource("PlaneMesh_nqk4g")
+surface_material_override/0 = SubResource("ShaderMaterial_fh6x0")
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 215.199, 73.1363, -0.545475)
+light_energy = 0.1
+
+[node name="TreeFall" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(4.983, 0, 0, 0, 4.61, 0, 0, 0, 1.605, 402.732, 34.7183, -3.44999)
+shaded = true
+render_priority = 1
+sprite_frames = SubResource("SpriteFrames_j0obb")
+script = ExtResource("16_ym3tv")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="TreeFall"]
+transform = Transform3D(0.200682, 0, 0, 0, 0.21692, 0, 0, 0, 0.623053, 8.09294, -3.48813, 1.80966)
+stream = ExtResource("17_bwj6o")
+volume_db = -12.907
+max_db = 0.76
+
+[node name="Timer3" type="Timer" parent="TreeFall"]
+wait_time = 0.83
+one_shot = true
+
+[node name="Area3D3" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 284.271, 18.638, -0.545475)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D3"]
+transform = Transform3D(7.79381, 0, 0, 0, 79.7113, 0, 0, 0, 30.3513, 29.0134, -18.5174, 0)
+shape = SubResource("BoxShape3D_nfavm")
+
+[node name="Fireflys" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 322.436, 18.638, -0.545475)
+
+[node name="Firefly" parent="Fireflys" instance=ExtResource("18_f3c8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.62612)
+
+[node name="Firefly2" parent="Fireflys" instance=ExtResource("18_f3c8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5102, -11.7756, -7.62612)
+
+[node name="Firefly3" parent="Fireflys" instance=ExtResource("18_f3c8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -16.1182, -7.62612)
+
+[node name="Firefly4" parent="Fireflys" instance=ExtResource("18_f3c8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5968, 0, -7.62612)
+
+[node name="Firefly5" parent="Fireflys" instance=ExtResource("18_f3c8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.72156, -9.17341, -7.62612)
+
+[node name="Firefly6" parent="Fireflys" instance=ExtResource("18_f3c8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9425, 1.84933, -4.17346)
+
+[node name="Firefly7" parent="Fireflys" instance=ExtResource("18_f3c8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8548, -16.9179, -7.62612)
+
+[node name="Firefly8" parent="Fireflys" instance=ExtResource("18_f3c8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4747, -21.9268, -7.62612)
+
+[node name="Firefly9" parent="Fireflys" instance=ExtResource("18_f3c8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.1391, 1.30181, -7.62612)
+
+[node name="Firefly11" parent="Fireflys" instance=ExtResource("18_f3c8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.68, 1.30181, -7.62612)
+
+[node name="Firefly12" parent="Fireflys" instance=ExtResource("18_f3c8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.68, -19.5478, -7.62612)
+
+[node name="Firefly10" parent="Fireflys" instance=ExtResource("18_f3c8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4771, -21.9268, -7.62612)
+
+[node name="Trees" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 322.436, 18.638, -0.545475)
+
+[node name="Bigtree" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, -39.0002, 19.0702, -12.5604)
+shaded = true
+render_priority = 1
+texture = ExtResource("19_bu0y5")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Trees/Bigtree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
+shaded = true
+render_priority = 1
+texture = ExtResource("20_6a4tp")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Trees/Bigtree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
+shaded = true
+render_priority = 1
+texture = ExtResource("21_631el")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Trees/Bigtree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
+shaded = true
+render_priority = 1
+texture = ExtResource("22_vs120")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Trees/Bigtree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
+shaded = true
+render_priority = 1
+texture = ExtResource("23_v2cs8")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Trees/Bigtree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864)
+shaded = true
+texture = ExtResource("24_32sfa")
+
+[node name="Bigtree6" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, -161.211, 19.0702, -12.5604)
+shaded = true
+render_priority = 1
+texture = ExtResource("19_bu0y5")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Trees/Bigtree6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
+shaded = true
+render_priority = 1
+texture = ExtResource("20_6a4tp")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Trees/Bigtree6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
+shaded = true
+render_priority = 1
+texture = ExtResource("21_631el")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Trees/Bigtree6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
+shaded = true
+render_priority = 1
+texture = ExtResource("22_vs120")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Trees/Bigtree6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
+shaded = true
+render_priority = 1
+texture = ExtResource("23_v2cs8")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Trees/Bigtree6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864)
+shaded = true
+texture = ExtResource("24_32sfa")
+
+[node name="Bigtree7" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, -101.811, 19.0702, -8.04362)
+shaded = true
+render_priority = 1
+texture = ExtResource("19_bu0y5")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Trees/Bigtree7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
+shaded = true
+render_priority = 1
+texture = ExtResource("20_6a4tp")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Trees/Bigtree7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
+shaded = true
+render_priority = 1
+texture = ExtResource("21_631el")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Trees/Bigtree7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
+shaded = true
+render_priority = 1
+texture = ExtResource("22_vs120")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Trees/Bigtree7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
+shaded = true
+render_priority = 1
+texture = ExtResource("23_v2cs8")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Trees/Bigtree7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864)
+shaded = true
+texture = ExtResource("24_32sfa")
+
+[node name="Bigtree2" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 2.99457, 19.4305, -19.0354)
+shaded = true
+texture = ExtResource("19_bu0y5")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Trees/Bigtree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
+shaded = true
+texture = ExtResource("20_6a4tp")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Trees/Bigtree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
+shaded = true
+texture = ExtResource("21_631el")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Trees/Bigtree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
+shaded = true
+texture = ExtResource("22_vs120")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Trees/Bigtree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
+shaded = true
+texture = ExtResource("23_v2cs8")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Trees/Bigtree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864)
+shaded = true
+texture = ExtResource("24_32sfa")
+
+[node name="Bigtree5" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 48.6633, 17.3464, -19.0354)
+shaded = true
+render_priority = 1
+texture = ExtResource("19_bu0y5")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Trees/Bigtree5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
+shaded = true
+render_priority = 1
+texture = ExtResource("20_6a4tp")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Trees/Bigtree5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
+shaded = true
+render_priority = 1
+texture = ExtResource("21_631el")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Trees/Bigtree5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
+shaded = true
+render_priority = 1
+texture = ExtResource("22_vs120")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Trees/Bigtree5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
+shaded = true
+render_priority = 1
+texture = ExtResource("23_v2cs8")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Trees/Bigtree5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864)
+shaded = true
+texture = ExtResource("24_32sfa")
+
+[node name="Bigtree3" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 85.2443, 19.168, -12.5604)
+shaded = true
+render_priority = 1
+texture = ExtResource("19_bu0y5")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Trees/Bigtree3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
+shaded = true
+render_priority = 1
+texture = ExtResource("20_6a4tp")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Trees/Bigtree3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
+shaded = true
+render_priority = 1
+texture = ExtResource("21_631el")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Trees/Bigtree3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
+shaded = true
+render_priority = 1
+texture = ExtResource("22_vs120")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Trees/Bigtree3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
+shaded = true
+render_priority = 1
+texture = ExtResource("23_v2cs8")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Trees/Bigtree3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864)
+shaded = true
+texture = ExtResource("24_32sfa")
+
+[node name="Bigtree4" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 127.239, 19.4827, -19.0354)
+shaded = true
+render_priority = 1
+texture = ExtResource("19_bu0y5")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Trees/Bigtree4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498718, -4.35354, 0.940224)
+shaded = true
+render_priority = 1
+texture = ExtResource("20_6a4tp")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Trees/Bigtree4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238636, -4.76871, 1.94741)
+shaded = true
+render_priority = 1
+texture = ExtResource("21_631el")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Trees/Bigtree4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0543461, -7.01947, 2.16715)
+shaded = true
+render_priority = 1
+texture = ExtResource("22_vs120")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Trees/Bigtree4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71367, -10.3954, 3.86402)
+shaded = true
+render_priority = 1
+texture = ExtResource("23_v2cs8")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Trees/Bigtree4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282133, -12.8091, 0.114864)
+shaded = true
+texture = ExtResource("24_32sfa")
+
+[node name="SmallTree2" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1.66738, 0, 0, 0, 1.59153, 0, 0, 0, 1, 21.2095, 9.49855, -3.39359)
+shaded = true
+render_priority = 3
+texture = ExtResource("25_titue")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Trees/SmallTree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.500389, 0, 0.970714)
+shaded = true
+render_priority = 2
+texture = ExtResource("26_tt7mg")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Trees/SmallTree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0867033, -0.501163, 2.56009)
+shaded = true
+render_priority = 2
+texture = ExtResource("27_htg8p")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Trees/SmallTree2"]
+shaded = true
+render_priority = 1
+texture = ExtResource("28_jcvim")
+
+[node name="Sprite3D5" type="Sprite3D" parent="Trees/SmallTree2"]
+shaded = true
+render_priority = 1
+texture = ExtResource("29_fnkle")
+
+[node name="Sprite3D6" type="Sprite3D" parent="Trees/SmallTree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.333595, -7.64328, -0.282732)
+shaded = true
+texture = ExtResource("30_wr3wg")
+
+[node name="SmallTree" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.81406, -25.8057, -2.46337)
+shaded = true
+render_priority = 1
+texture = ExtResource("31_6xvgv")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Trees/SmallTree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.360467, 1.66636, 0.208168)
+shaded = true
+render_priority = 1
+texture = ExtResource("32_8lpvs")
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 2.05
+one_shot = true
+
+[node name="TreeFall2" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(3.79, 0, 0, 0, 3.79, 0, 0, 0, 3.79, 402.489, 27.9119, 1.40409)
+transparency = 1.0
+shaded = true
+render_priority = 3
+sprite_frames = SubResource("SpriteFrames_jcn4n")
+script = ExtResource("33_x6jpx")
+
 [connection signal="area_entered" from="Area3D2" to="Area3D2" method="_on_area_entered"]
+[connection signal="animation_finished" from="TreeFall" to="TreeFall" method="_on_animation_finished"]
+[connection signal="animation_finished" from="TreeFall" to="TreeFall2" method="_on_tree_fall_animation_finished"]
+[connection signal="timeout" from="TreeFall/Timer3" to="TreeFall" method="_on_timer_3_timeout"]
+[connection signal="area_exited" from="Area3D3" to="Camera3D" method="_on_area_3d_3_area_exited"]
+[connection signal="area_exited" from="Area3D3" to="TreeFall" method="_on_area_3d_3_area_exited"]
+[connection signal="timeout" from="Timer2" to="Camera3D" method="_on_timer_2_timeout"]
