@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dsa0y2jhyktcq"]
+[gd_scene load_steps=37 format=3 uid="uid://dsa0y2jhyktcq"]
 
 [ext_resource type="Texture2D" uid="uid://wrigsrvy7k6r" path="res://assets/HouseAssets/LivingRoom/Living room.png" id="1_3ysdx"]
 [ext_resource type="Texture2D" uid="uid://udgeyll6rhns" path="res://assets/HouseAssets/LivingRoom/Door-1.png" id="2_yosbh"]
@@ -13,6 +13,10 @@
 [ext_resource type="Script" uid="uid://b7aqh4olxsno5" path="res://scripts/PlayerCamControll.gd" id="11_41126"]
 [ext_resource type="PackedScene" uid="uid://y7yahejeiy3j" path="res://Scenes/player.tscn" id="12_fqrew"]
 [ext_resource type="Texture2D" uid="uid://rhwktl8fstfu" path="res://assets/Characters/Background/Characters.png" id="13_fqrew"]
+[ext_resource type="Texture2D" uid="uid://co8j4pkyorj1u" path="res://assets/HouseAssets/red.png" id="14_edsqu"]
+[ext_resource type="FontFile" uid="uid://dhb7xo26svoqp" path="res://assets/Oswald-Bold.ttf" id="15_jcixc"]
+[ext_resource type="Script" uid="uid://dxvo5yvcsy118" path="res://subtitles.gd" id="15_r5w0m"]
+[ext_resource type="FontFile" uid="uid://v5s6o2a07616" path="res://assets/Raleway-Italic-VariableFont_wght.ttf" id="16_lq3q6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_edsqu"]
 size = Vector3(160.147, 12.3462, 44.1948)
@@ -107,6 +111,26 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_jcixc"]
+size = Vector3(3.15723, 39.8974, 42.0854)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r5w0m"]
+
+[sub_resource type="Theme" id="Theme_jcixc"]
+Panel/styles/panel = SubResource("StyleBoxTexture_r5w0m")
+
+[sub_resource type="Theme" id="Theme_8oolt"]
+default_font = ExtResource("15_jcixc")
+default_font_size = 25
+
+[sub_resource type="Theme" id="Theme_r5w0m"]
+default_font = ExtResource("15_jcixc")
+default_font_size = 67
+
+[sub_resource type="Theme" id="Theme_u764j"]
+default_font = ExtResource("16_lq3q6")
+default_font_size = 87
+
 [node name="Node3D" type="Node3D"]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
@@ -128,26 +152,30 @@ texture = ExtResource("3_41126")
 
 [node name="Sprite3D4" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.241112, 6.51007, 0.49894)
+visible = false
 shaded = true
 render_priority = 1
 texture = ExtResource("4_fqrew")
 
 [node name="Sprite3D5" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.783623, 5.66617, 0.518231)
+visible = false
 shaded = true
-render_priority = 2
+render_priority = 1
 texture = ExtResource("5_edsqu")
 
 [node name="Sprite3D7" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.38056, 5.21348, 0.811505)
+visible = false
 shaded = true
-render_priority = 2
+render_priority = 1
 texture = ExtResource("6_jcixc")
 
 [node name="Sprite3D8" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.801117, 5.55887, 0.706342)
+visible = false
 shaded = true
-render_priority = 2
+render_priority = 1
 texture = ExtResource("7_lq3q6")
 
 [node name="Sprite3D6" type="Sprite3D" parent="."]
@@ -181,7 +209,7 @@ light_color = Color(1, 0.882353, 0.654902, 1)
 light_energy = 0.25
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35667, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31022, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3084, -16.5164, 2.71011)
@@ -229,3 +257,85 @@ sprite_frames = SubResource("SpriteFrames_f1ju2")
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -9.94893, -3.81375, 5.28751)
 render_priority = 1
 sprite_frames = SubResource("SpriteFrames_v2ijq")
+
+[node name="Sprite3D11" type="Sprite3D" parent="."]
+transform = Transform3D(3.03441, 0, 0, 0, 1.76425, 0, 0, 0, 1, 0, 0, 9.66284)
+visible = false
+transparency = 0.74
+render_priority = 6
+texture = ExtResource("14_edsqu")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0854, -1.51913, 2.45816)
+shape = SubResource("BoxShape3D_jcixc")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.3475, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0854, -1.51913, 2.45816)
+shape = SubResource("BoxShape3D_jcixc")
+
+[node name="Subtitles" type="CanvasLayer" parent="."]
+script = ExtResource("15_r5w0m")
+
+[node name="Dialog" type="Control" parent="Subtitles"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -960.5
+offset_top = -288.0
+offset_right = 960.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_jcixc")
+
+[node name="Box" type="Panel" parent="Subtitles/Dialog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Subtitles/Dialog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Subtitles/Dialog/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_8oolt")
+text = "Stranger1"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Dialog" type="RichTextLabel" parent="Subtitles/Dialog/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_r5w0m")
+theme_override_colors/default_color = Color(0.88127, 0.112843, 4.81307e-07, 0.596078)
+bbcode_enabled = true
+text = "Rabbits are jumpy"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Subtitles/Dialog/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_u764j")
+theme_override_colors/default_color = Color(1, 1, 1, 0.784314)
+bbcode_enabled = true
+text = "Hello"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1

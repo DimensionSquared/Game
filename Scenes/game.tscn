@@ -296,6 +296,16 @@ transform = Transform3D(4.30561, 0, 0, 0, 2.90521, 0, 0, 0, 1, -0.0328445, 3.913
 shaded = true
 texture = ExtResource("2_qxrlw")
 
+[node name="Sprite3D13" type="Sprite3D" parent="."]
+transform = Transform3D(4.30561, 0, 0, 0, 2.90521, 0, 0, 0, 1, 195.537, 3.91388, -34.6459)
+shaded = true
+texture = ExtResource("2_qxrlw")
+
+[node name="Sprite3D14" type="Sprite3D" parent="."]
+transform = Transform3D(4.30561, 0, 0, 0, 2.90521, 0, 0, 0, 1, 434.82, 3.91388, -33.8995)
+shaded = true
+texture = ExtResource("2_qxrlw")
+
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99966, -20.2171, 0.0657614)
 shaded = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cps4axapjl33l"]
+[gd_scene load_steps=25 format=3 uid="uid://cps4axapjl33l"]
 
 [ext_resource type="Texture2D" uid="uid://bda06dl7oo26i" path="res://assets/HouseAssets/BedRoom/Bed.png" id="1_03x4i"]
 [ext_resource type="Texture2D" uid="uid://di52f0knrp65i" path="res://assets/HouseAssets/BedRoom/Book Case.png" id="2_q2ksr"]
@@ -9,6 +9,10 @@
 [ext_resource type="Script" uid="uid://cl55qtflovfa5" path="res://Scenes/InteractButton.gd" id="8_q2ksr"]
 [ext_resource type="Texture2D" uid="uid://c0ur1qteabguq" path="res://assets/HouseAssets/BedRoom/Wall3.png" id="9_dbona"]
 [ext_resource type="Texture2D" uid="uid://cn2b7kklwfwwg" path="res://assets/Interact.png" id="10_f6h1l"]
+[ext_resource type="Script" uid="uid://dn2ey7pyefs10" path="res://Scenes/subtitles2.gd" id="10_m7w2y"]
+[ext_resource type="FontFile" uid="uid://dhb7xo26svoqp" path="res://assets/Oswald-Bold.ttf" id="11_m7w2y"]
+[ext_resource type="FontFile" uid="uid://v5s6o2a07616" path="res://assets/Raleway-Italic-VariableFont_wght.ttf" id="12_wnxyt"]
+[ext_resource type="Texture2D" uid="uid://rhwktl8fstfu" path="res://assets/Characters/Background/Characters.png" id="13_m7w2y"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wnxyt"]
 size = Vector3(160.147, 12.3462, 44.1948)
@@ -16,16 +20,63 @@ size = Vector3(160.147, 12.3462, 44.1948)
 [sub_resource type="BoxShape3D" id="BoxShape3D_q2ksr"]
 size = Vector3(17.347, 16.2068, 3.11417)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_edsqu"]
+
+[sub_resource type="Theme" id="Theme_ihrov"]
+Panel/styles/panel = SubResource("StyleBoxTexture_edsqu")
+
+[sub_resource type="Theme" id="Theme_vcq3p"]
+default_font = ExtResource("11_m7w2y")
+default_font_size = 25
+
+[sub_resource type="Theme" id="Theme_7eteg"]
+default_font = ExtResource("12_wnxyt")
+default_font_size = 67
+
+[sub_resource type="Theme" id="Theme_idavr"]
+default_font = ExtResource("12_wnxyt")
+default_font_size = 87
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edsqu"]
+atlas = ExtResource("13_m7w2y")
+region = Rect2(4000, 2000, 2000, 2000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wnxyt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edsqu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lq3q6"]
+atlas = ExtResource("13_m7w2y")
+region = Rect2(0, 4000, 2000, 2000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ihrov"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lq3q6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Bed-Room" type="Node3D"]
 
 [node name="Bed" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3733, -4.42836, 1.12805)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3733, -4.29832, 1.12805)
 shaded = true
 render_priority = 1
 texture = ExtResource("1_03x4i")
 
 [node name="Book-Case" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90483, -1.31606, 0.511223)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90483, -1.24416, 0.511223)
 shaded = true
 render_priority = 1
 texture = ExtResource("2_q2ksr")
@@ -52,7 +103,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.004, 2.17519, 3.74241)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.6712, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3084, -16.5164, 2.71011)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3084, -16.328, 2.71011)
 shape = SubResource("BoxShape3D_wnxyt")
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -88,6 +139,80 @@ shape = SubResource("BoxShape3D_q2ksr")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17646, 3.62598, 0)
 shaded = true
 texture = ExtResource("9_dbona")
+
+[node name="Subtitles" type="CanvasLayer" parent="."]
+script = ExtResource("10_m7w2y")
+
+[node name="Dialog" type="Control" parent="Subtitles"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -960.5
+offset_top = -288.0
+offset_right = 960.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_ihrov")
+
+[node name="Box" type="Panel" parent="Subtitles/Dialog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Subtitles/Dialog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Subtitles/Dialog/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_vcq3p")
+text = "Stranger1"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Dialog" type="RichTextLabel" parent="Subtitles/Dialog/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_7eteg")
+theme_override_colors/default_color = Color(1, 1, 1, 0.596078)
+bbcode_enabled = true
+text = "Rabbits are jumpy"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Subtitles/Dialog/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_idavr")
+theme_override_colors/default_color = Color(1, 1, 1, 0.784314)
+bbcode_enabled = true
+text = "Hello"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mum" type="AnimatedSprite3D" parent="Subtitles"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -9.17458, 0.638818, 1.98931)
+flip_h = true
+render_priority = 1
+sprite_frames = SubResource("SpriteFrames_wnxyt")
+
+[node name="Dad" type="AnimatedSprite3D" parent="Subtitles"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -5.05037, -2.23081, 1.91397)
+flip_h = true
+render_priority = 2
+sprite_frames = SubResource("SpriteFrames_ihrov")
 
 [connection signal="area_entered" from="Sprite3D/Area" to="Door" method="_on_area_area_entered"]
 [connection signal="area_entered" from="Sprite3D/Area" to="Sprite3D" method="_on_area_area_entered"]
