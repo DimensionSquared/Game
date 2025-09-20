@@ -16,8 +16,9 @@ var dialog_lines: Array[Dictionary] = [
 	{"speaker": "Stranger 1", "text": "Oh yeah, hes a real smart kid", "label": "normal"},
 	{"speaker": "Stranger 4", "text": "Thats great", "label": "normal"},
 	{"speaker": "...", "text": "..........", "label": "normal"},
-	{"speaker": "Stranger ?", "text": "Who iaw thiqrt blrgh hssk!", "label": "fancy"},
-	{"speaker": "Stranger ??", "text": "Leavwl Rkn atayhh!!!", "label": "fancy"},
+	{"speaker": "Stranger ?", "text": "Who is this..", "label": "fancy"},
+	{"speaker": "Stranger ??", "text": "Oh must it kid of ..", "label": "fancy"},
+	{"speaker": "Stranger ??", "text": "Little guy wadin oaw ergomwad", "label": "fancy"},
 	{"speaker": "", "text": "RUN!", "label": "fancy"}
 ]
 

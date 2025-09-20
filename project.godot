@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Unheard"
-run/main_scene="uid://rwrgrgogyffm"
+run/main_scene="uid://cps4axapjl33l"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
 [display]
