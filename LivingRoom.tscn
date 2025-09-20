@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dsa0y2jhyktcq"]
+[gd_scene load_steps=40 format=3 uid="uid://dsa0y2jhyktcq"]
 
 [ext_resource type="Texture2D" uid="uid://wrigsrvy7k6r" path="res://assets/HouseAssets/LivingRoom/Living room.png" id="1_3ysdx"]
 [ext_resource type="Texture2D" uid="uid://udgeyll6rhns" path="res://assets/HouseAssets/LivingRoom/Door-1.png" id="2_yosbh"]
@@ -17,9 +17,31 @@
 [ext_resource type="FontFile" uid="uid://dhb7xo26svoqp" path="res://assets/Oswald-Bold.ttf" id="15_jcixc"]
 [ext_resource type="Script" uid="uid://dxvo5yvcsy118" path="res://subtitles.gd" id="15_r5w0m"]
 [ext_resource type="FontFile" uid="uid://v5s6o2a07616" path="res://assets/Raleway-Italic-VariableFont_wght.ttf" id="16_lq3q6"]
+[ext_resource type="Texture2D" uid="uid://cn2b7kklwfwwg" path="res://assets/Interact.png" id="18_8oolt"]
+[ext_resource type="Script" uid="uid://dj6c6qn5klwn5" path="res://button2.gd" id="19_2djvu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_edsqu"]
 size = Vector3(160.147, 12.3462, 44.1948)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jcixc"]
+size = Vector3(3.15723, 39.8974, 42.0854)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r5w0m"]
+
+[sub_resource type="Theme" id="Theme_jcixc"]
+Panel/styles/panel = SubResource("StyleBoxTexture_r5w0m")
+
+[sub_resource type="Theme" id="Theme_8oolt"]
+default_font = ExtResource("15_jcixc")
+default_font_size = 25
+
+[sub_resource type="Theme" id="Theme_r5w0m"]
+default_font = ExtResource("15_jcixc")
+default_font_size = 67
+
+[sub_resource type="Theme" id="Theme_u764j"]
+default_font = ExtResource("16_lq3q6")
+default_font_size = 87
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_edsqu"]
 atlas = ExtResource("13_fqrew")
@@ -111,25 +133,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_jcixc"]
-size = Vector3(3.15723, 39.8974, 42.0854)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r5w0m"]
-
-[sub_resource type="Theme" id="Theme_jcixc"]
-Panel/styles/panel = SubResource("StyleBoxTexture_r5w0m")
-
-[sub_resource type="Theme" id="Theme_8oolt"]
-default_font = ExtResource("15_jcixc")
-default_font_size = 25
-
-[sub_resource type="Theme" id="Theme_r5w0m"]
-default_font = ExtResource("15_jcixc")
-default_font_size = 67
-
-[sub_resource type="Theme" id="Theme_u764j"]
-default_font = ExtResource("16_lq3q6")
-default_font_size = 87
+[sub_resource type="BoxShape3D" id="BoxShape3D_d1s6f"]
+size = Vector3(17.347, 16.2068, 3.11417)
 
 [node name="Node3D" type="Node3D"]
 
@@ -225,46 +230,6 @@ target_path = NodePath("../Player")
 [node name="Player" parent="." instance=ExtResource("12_fqrew")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.6245, -0.307488, 3.74241)
 
-[node name="Characters" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1786, 0)
-
-[node name="Mum" type="AnimatedSprite3D" parent="Characters"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -4.40418, -2.65305, 6.06271)
-render_priority = 1
-sprite_frames = SubResource("SpriteFrames_jcixc")
-
-[node name="Dad" type="AnimatedSprite3D" parent="Characters"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6.73994, -5.04022, 4.25419)
-render_priority = 1
-sprite_frames = SubResource("SpriteFrames_r5w0m")
-
-[node name="Char3" type="AnimatedSprite3D" parent="Characters"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.71145, -3.15049, 4.25419)
-render_priority = 1
-sprite_frames = SubResource("SpriteFrames_8oolt")
-
-[node name="Char4" type="AnimatedSprite3D" parent="Characters"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5581, -2.73595, 4.25419)
-render_priority = 1
-sprite_frames = SubResource("SpriteFrames_d1s6f")
-
-[node name="Char5" type="AnimatedSprite3D" parent="Characters"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3689, -3.08251, 4.67392)
-render_priority = 1
-sprite_frames = SubResource("SpriteFrames_f1ju2")
-
-[node name="Char6" type="AnimatedSprite3D" parent="Characters"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -9.94893, -3.81375, 5.28751)
-render_priority = 1
-sprite_frames = SubResource("SpriteFrames_v2ijq")
-
-[node name="Sprite3D11" type="Sprite3D" parent="."]
-transform = Transform3D(3.03441, 0, 0, 0, 1.76425, 0, 0, 0, 1, 0, 0, 9.66284)
-visible = false
-transparency = 0.74
-render_priority = 6
-texture = ExtResource("14_edsqu")
-
 [node name="StaticBody3D2" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
@@ -339,3 +304,59 @@ text = "Hello"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Characters" type="Node3D" parent="Subtitles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1786, 0)
+
+[node name="Mum" type="AnimatedSprite3D" parent="Subtitles/Characters"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -4.40418, -2.65305, 6.06271)
+render_priority = 1
+sprite_frames = SubResource("SpriteFrames_jcixc")
+
+[node name="Dad" type="AnimatedSprite3D" parent="Subtitles/Characters"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4.57906, -5.04022, 4.25419)
+render_priority = 1
+sprite_frames = SubResource("SpriteFrames_r5w0m")
+
+[node name="Char3" type="AnimatedSprite3D" parent="Subtitles/Characters"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.71145, -3.15049, 4.25419)
+render_priority = 1
+sprite_frames = SubResource("SpriteFrames_8oolt")
+
+[node name="Char4" type="AnimatedSprite3D" parent="Subtitles/Characters"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12.5581, -2.73595, 4.25419)
+render_priority = 1
+sprite_frames = SubResource("SpriteFrames_d1s6f")
+
+[node name="Char5" type="AnimatedSprite3D" parent="Subtitles/Characters"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.3689, -3.08251, 4.67392)
+render_priority = 1
+sprite_frames = SubResource("SpriteFrames_f1ju2")
+
+[node name="Char6" type="AnimatedSprite3D" parent="Subtitles/Characters"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -9.94893, -3.81375, 5.28751)
+render_priority = 1
+sprite_frames = SubResource("SpriteFrames_v2ijq")
+
+[node name="Overlay" type="Sprite3D" parent="Subtitles"]
+transform = Transform3D(3.03441, 0, 0, 0, 1.76425, 0, 0, 0, 1, 0, 0, 9.66284)
+transparency = 1.0
+render_priority = 6
+texture = ExtResource("14_edsqu")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Subtitles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4672, -0.894, 3.44385)
+transparency = 1.0
+render_priority = 1
+texture = ExtResource("18_8oolt")
+script = ExtResource("19_2djvu")
+
+[node name="Area" type="Area3D" parent="Subtitles/Sprite3D11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.155556, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Subtitles/Sprite3D11/Area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0450611, 0.038437, -0.121719)
+shape = SubResource("BoxShape3D_d1s6f")
+
+[connection signal="area_entered" from="Subtitles/Sprite3D11/Area" to="Subtitles/Sprite3D11" method="_on_area_area_entered"]
+[connection signal="area_exited" from="Subtitles/Sprite3D11/Area" to="Subtitles/Sprite3D11" method="_on_area_area_exited"]

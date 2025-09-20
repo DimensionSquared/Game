@@ -4,19 +4,27 @@ extends CanvasLayer
 @onready var normal_label = $Dialog/VBoxContainer/RichTextLabel
 @onready var fancy_label = $Dialog/VBoxContainer/Dialog
 
+@onready var characters = $Characters
+@onready var overlay = $Overlay
+
 var current_label: RichTextLabel
 
-# each line now has: speaker, text, and font choice
 var dialog_lines: Array[Dictionary] = [
-	{"speaker": "Stranger 1", "text": "Hey, did you see that guy?", "label": "normal"},
-	{"speaker": "Stranger 2", "text": "Yeah, he looks kinda lost.", "label": "fancy"},
-	{"speaker": "Stranger 3", "text": "Maybe we should talk to him.", "label": "normal"},
-	{"speaker": "Stranger 1", "text": "No, let’s just watch for now...", "label": "fancy"}
+	{"speaker": "Stranger 1", "text": "Hows it going", "label": "normal"},
+	{"speaker": "Stranger 2", "text": "Yeah great", "label": "normal"},
+	{"speaker": "Stranger 3", "text": "I heard timmy got an a+ last week", "label": "normal"},
+	{"speaker": "Stranger 1", "text": "Oh yeah, hes a real smart kid", "label": "normal"},
+	{"speaker": "Stranger 4", "text": "Thats great", "label": "normal"},
+	{"speaker": "...", "text": "..........", "label": "normal"},
+	{"speaker": "Stranger ?", "text": "Who iaw thiqrt blrgh hssk!", "label": "fancy"},
+	{"speaker": "Stranger ??", "text": "Leavwl Rkn atayhh!!!", "label": "fancy"},
+	{"speaker": "", "text": "RUN!", "label": "fancy"}
 ]
 
 var current_line: int = 0
 var typing: bool = false
 var text_speed: float = 0.03
+var triggered: bool = false   # once ... happens
 
 func _ready():
 	current_label = normal_label
@@ -28,6 +36,10 @@ func show_line():
 
 	# set speaker name
 	name_label.text = line_data["speaker"]
+
+	# trigger special event when "..." line appears
+	if line_data["text"] == "..........":
+		trigger_event()
 
 	# pick which text label to use
 	if label_choice == "normal":
@@ -55,7 +67,6 @@ func type_text(text: String) -> void:
 func _input(event):
 	if event.is_action_pressed("ui_accept"):
 		if typing:
-			# instantly finish typing
 			current_label.text = dialog_lines[current_line]["text"]
 			typing = false
 		else:
@@ -64,3 +75,20 @@ func _input(event):
 				show_line()
 			else:
 				hide()
+
+# special trigger when reaching "..."
+func trigger_event():
+	if triggered:
+		return
+	
+	triggered = true
+
+	# flip all characters
+	for c in characters.get_children():
+		if c is AnimatedSprite3D:
+			c.flip_h = !c.flip_h
+
+	# fade in overlay (from alpha 0 to 0.5)
+	overlay.transparency = 1.0  # fully invisible
+	var tween = create_tween()
+	tween.tween_property(overlay, "transparency", 0.65, 3.0)

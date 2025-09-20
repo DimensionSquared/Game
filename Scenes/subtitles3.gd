@@ -4,21 +4,20 @@ extends CanvasLayer
 @onready var normal_label = $Dialog/VBoxContainer/RichTextLabel
 @onready var fancy_label = $Dialog/VBoxContainer/Dialog
 
+@onready var characters = $Characters        # container with AnimatedSprite3D children
+	  # fades in after "..."
+
 var current_label: RichTextLabel
 
-@onready var char1 = $Dad
-@onready var char2 = $Mum
 
 var dialog_lines: Array[Dictionary] = [
-	{"speaker": "Mum", "text": "Hey kid (press enter to continue)", "label": "normal"},
-	{"speaker": "Mum", "text": "Were throwing a party, why not come out and see the guests?", "label": "fancy"},
-	{"speaker": "Dad", "text": "Yeah, be social for once", "label": "normal"},
-	{"speaker": "Mum", "text": "And no comlaining", "label": "fancy"}
-	]
+	{"speaker": "", "text": "RUN!!!!", "label": "fancy"}
+]
 
 var current_line: int = 0
 var typing: bool = false
 var text_speed: float = 0.03
+var triggered: bool = false   # once "..." happens
 
 func _ready():
 	current_label = normal_label
@@ -31,7 +30,7 @@ func show_line():
 	# set speaker name
 	name_label.text = line_data["speaker"]
 
-	# choose which text label to use
+	# pick which text label to use
 	if label_choice == "normal":
 		fancy_label.hide()
 		normal_label.show()
@@ -54,20 +53,7 @@ func type_text(text: String) -> void:
 		i += 1
 	typing = false
 
-func _input(event):
-	if event.is_action_pressed("ui_accept"):
-		if typing:
-			current_label.text = dialog_lines[current_line]["text"]
-			typing = false
-		else:
-			current_line += 1
-			if current_line < dialog_lines.size():
-				show_line()
-			else:
-				end_dialog()
 
-func end_dialog():
-	# hide both children
-	char1.hide()
-	char2.hide()
-	
+
+func _on_area_3d_4_area_entered(area: Area3D) -> void:
+	visible = false
